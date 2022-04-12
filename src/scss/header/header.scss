@@ -1,0 +1,190 @@
+.header {
+   @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+   }
+   // .header__content
+   &__content {
+      display: flex;
+      align-items: center;
+      height: rem(100);
+      @media (max-width: $tablet) {
+         height: rem(80);
+      }
+   }
+   // .header__logo
+   &__logo {
+      margin-right: rem(45);
+   }
+   // .header__nav
+   &__nav {
+      @media (max-width: $tablet) {
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.9);
+         padding: rem(130) rem(15) rem(30);
+         z-index: 2;
+         overflow-y: auto;
+         &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(100);
+            background-color: #fff;
+            z-index: 3;
+            @media (max-width: $tablet) {
+               height: rem(80);
+            }
+         }
+         transition: all 0.3s ease 0s;
+         &.open {
+            left: 0%;
+         }
+      }
+   }
+   // .header__user
+   &__user {
+   }
+   // .header__menu
+   &__icon-menu {
+      margin-left: em(10);
+   }
+}
+.logo {
+   display: flex;
+   align-items: center;
+   @media (max-width: $tablet) {
+      z-index: 10;
+   }
+   // .logo__img
+   &__img {
+      margin-right: em(6);
+      flex: 0 0 rem(56);
+      img {
+         width: 100%;
+      }
+   }
+   // .logo__text
+   &__text {
+      font-family: $fontFamilyP;
+      font-size: rem(22);
+      color: $violet;
+   }
+}
+.nav-header {
+   display: flex;
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   // .nav-header__link
+   &__link {
+      font-family: $fontFamilyT;
+      font-size: rem(20);
+      line-height: 134.2%;
+      color: $violet;
+      transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         &:hover {
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+         }
+      }
+      &:not(:last-child) {
+         margin-right: rem(38);
+      }
+      @media (max-width: $tablet) {
+         color: #fff;
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+            margin-right: rem(0);
+         }
+      }
+   }
+}
+.user-header {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   color: $violet;
+   z-index: 11;
+   // .user-header__text
+   &__text {
+      font-family: $fontFamilyT;
+      font-size: rem(20);
+      line-height: 134.2%;
+      margin-right: rem(10);
+      @media (max-width: $mobile) {
+         font-size: 0;
+      }
+   }
+   // .user-header__icon
+   &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      border: 1px solid;
+      border: 1px solid linear-gradient(90deg, #cd2288 0%, #8700ff 100%);
+      img {
+         max-height: rem(22);
+      }
+   }
+}
+.icon-menu {
+   display: none;
+   @media (max-width: $tablet) {
+      display: flex;
+      position: relative;
+      width: rem(30);
+      height: rem(18);
+      cursor: pointer;
+      z-index: 5;
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         right: 0;
+         position: absolute;
+         width: 100%;
+         flex: 0 0 rem(30);
+         height: rem(2);
+         background-color: $violet;
+         opacity: 1;
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         top: calc(50% - rem(1));
+      }
+      &.menu-open {
+         span {
+            width: 0;
+            opacity: 0;
+         }
+         &::before {
+            top: calc(50% - rem(1));
+            transform: rotate(-45deg);
+         }
+         &::after {
+            bottom: calc(50% - rem(1));
+            transform: rotate(45deg);
+         }
+      }
+   }
+}

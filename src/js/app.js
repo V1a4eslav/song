@@ -1,5 +1,62 @@
-import * as flsFunctions from './modules/functions.js';
+import * as functions from './modules/functions.js';
+import * as home from './home/variables.js';
+import Swiper, { Navigation } from 'swiper';
+import * as slide from './home/templates/templatesForHtml.js';
 
-flsFunctions.isWebp();
+functions.isWebp();
+slide.createSlide()
 
-console.log('Привет');
+home.iconMenu.addEventListener("click", burgerFuntions);
+
+function burgerFuntions(e) {
+   if (home.iconMenu && e.target.closest('.icon-menu')) {
+      console.log(this);
+      this.classList.toggle('menu-open')
+      document.body.classList.toggle('lock')
+      if (this.classList.contains('menu-open')) {
+         home.headerNav.classList.add('open')
+      } else {
+         home.headerNav.classList.remove('open')
+      }
+   }
+}
+
+new Swiper('.main-slider__content', {
+   modules: [Navigation],
+   navigation: {
+      prevEl: '.slide-main-slider__prev',
+      nextEl: '.slide-main-slider__next',
+   },
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import axios from "axios";
+// const options = {
+//    method: 'GET',
+//    url: 'https://shazam.p.rapidapi.com/search',
+//    params: { term: 'kiss the rain', locale: 'en-US', offset: '0', limit: '5' },
+//    headers: {
+//       'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
+//       'X-RapidAPI-Key': '2482486450msh007a4a83c861c57p18d2f6jsn18435d945892'
+//    }
+// };
+
+// axios.request(options).then(function (response) {
+//    console.log(response.data);
+// }).catch(function (error) {
+//    console.error(error);
+// });

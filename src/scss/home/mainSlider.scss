@@ -1,0 +1,165 @@
+.page {
+   // .page__main-lider
+   &__main-lider {
+   }
+}
+.main-slider {
+   @media (max-width: $tablet) {
+      margin-top: rem(80);
+   }
+   // .main-slider__container
+   &__container {
+   }
+   // .main-slider__content
+   &__content {
+   }
+   // .main-slider__wrapper
+   &__wrapper {
+   }
+   // .main-slider__slide
+   &__slide {
+   }
+}
+.slide-main-slider {
+   background-image: url("../img/home/bieber.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-top: rem(30);
+   padding-bottom: rem(30);
+   font-family: $fontFamilyP;
+   color: #ffffff;
+   // .slide-main-slider__genre
+   &__genre {
+      text-transform: uppercase;
+      font-weight: 700;
+      @include adaptiveValue("font-size", 25, 20, 991.98, 320, 1);
+      @include adaptiveValue("margin-bottom", 50, 20, 991.98, 320, 1);
+      opacity: 0.7;
+   }
+   // .slide-main-slider__musician
+   &__musician {
+      font-weight: 700;
+      max-width: rem(600);
+      @include adaptiveValue("font-size", 105, 50, 1920, 991.98, 1);
+      @include adaptiveValue("font-size", 50, 30, 991.98, 320, 1);
+      margin-bottom: rem(20);
+      @media (max-width: $tablet) {
+         margin-bottom: 10px;
+      }
+   }
+   // .slide-main-slider__typesong
+   &__typesong {
+      font-weight: 300;
+      margin-bottom: rem(30);
+      font-size: rem(20);
+      line-height: 1.2;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   }
+   // .slide-main-slider__play
+   &__play {
+      display: inline-block;
+      margin-bottom: rem(20);
+      transition: transform 0.3s ease 0s;
+      cursor: pointer;
+      @media (min-width: $tablet) {
+         margin-bottom: rem(46);
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+   // .slide-main-slider__button
+   &__button {
+      margin-bottom: rem(50);
+      display: flex;
+      @media (max-width: $tablet) {
+         margin-bottom: rem(35);
+      }
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         align-items: flex-start;
+         // justify-content: center;
+      }
+   }
+   &__signin,
+   &__btn {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease 0s;
+   }
+   // .slide-main-slider__btn
+   &__btn {
+      padding: 16px 20px;
+      color: #55287d;
+      border-radius: 10px;
+      background-color: #fff;
+      margin-right: rem(24);
+      @media (max-width: $tablet) {
+         padding: 10px 15px;
+         font-size: rem(14);
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         margin-right: 0;
+      }
+   }
+   // .slide-main-slider__signin
+   &__signin {
+      align-self: flex-end;
+      color: #fff;
+      padding: 10px 29px 10px;
+      border-bottom: 3px solid #fff;
+      @media (min-width: $tablet) {
+         &:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         align-self: flex-start;
+      }
+   }
+   // .slide-main-slider__switches
+   &__switches {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+   }
+   &__prev,
+   &__next {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease 0.2s;
+      &.swiper-button-disabled {
+         opacity: 0.3;
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            outline: 1px solid #fff;
+            &.swiper-button-disabled {
+               outline: none;
+               cursor: auto;
+            }
+         }
+      }
+   }
+   // .slide-main-slider__prev
+   &__prev {
+      margin-right: rem(10);
+      transform: rotate(-180deg);
+   }
+   // .slide-main-slider__next
+   &__next {
+   }
+}
