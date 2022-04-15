@@ -1,6 +1,6 @@
 .page {
-   // .page__main-lider
-   &__main-lider {
+   // .page__main-slider
+   &__main-slider {
    }
 }
 .main-slider {
@@ -29,6 +29,7 @@
    padding-bottom: rem(30);
    font-family: $fontFamilyP;
    color: #ffffff;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
    // .slide-main-slider__genre
    &__genre {
       text-transform: uppercase;
@@ -54,13 +55,14 @@
       margin-bottom: rem(30);
       font-size: rem(20);
       line-height: 1.2;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
    }
    // .slide-main-slider__play
    &__play {
       display: inline-block;
       margin-bottom: rem(20);
       transition: transform 0.3s ease 0s;
+      border-radius: 50%;
       cursor: pointer;
       @media (min-width: $tablet) {
          margin-bottom: rem(46);

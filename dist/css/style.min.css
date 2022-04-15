@@ -355,7 +355,7 @@ body.lock {
 .logo__text {
   font-family: "Poppins";
   font-size: 1.375rem;
-  color: #55287D;
+  color: #55287d;
 }
 
 .nav-header {
@@ -372,7 +372,7 @@ body.lock {
   font-family: "Texgyreheros";
   font-size: 1.25rem;
   line-height: 134.2%;
-  color: #55287D;
+  color: #55287d;
   transition: all 0.3s ease 0s;
 }
 @media (min-width: 61.99875em) {
@@ -397,7 +397,7 @@ body.lock {
   display: flex;
   align-items: center;
   margin-left: auto;
-  color: #55287D;
+  color: #55287d;
   z-index: 11;
 }
 .user-header__text {
@@ -445,7 +445,7 @@ body.lock {
     width: 100%;
     flex: 0 0 1.875rem;
     height: 0.125rem;
-    background-color: #55287D;
+    background-color: #55287d;
     opacity: 1;
   }
   .icon-menu::before {
@@ -485,6 +485,7 @@ body.lock {
   padding-bottom: 1.875rem;
   font-family: "Poppins";
   color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .slide-main-slider__genre {
   text-transform: uppercase;
@@ -546,12 +547,13 @@ body.lock {
   margin-bottom: 1.875rem;
   font-size: 1.25rem;
   line-height: 1.2;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 .slide-main-slider__play {
   display: inline-block;
   margin-bottom: 1.25rem;
   transition: transform 0.3s ease 0s;
+  border-radius: 50%;
   cursor: pointer;
 }
 @media (min-width: 61.99875em) {

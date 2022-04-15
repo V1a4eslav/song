@@ -1,7 +1,8 @@
 import * as functions from './modules/functions.js';
 import * as home from './home/variables.js';
-import Swiper, { Navigation } from 'swiper';
 import * as slide from './home/templates/templatesForHtml.js';
+
+
 
 functions.isWebp();
 slide.createSlide()
@@ -21,13 +22,7 @@ function burgerFuntions(e) {
    }
 }
 
-new Swiper('.main-slider__content', {
-   modules: [Navigation],
-   navigation: {
-      prevEl: '.slide-main-slider__prev',
-      nextEl: '.slide-main-slider__next',
-   },
-})
+
 
 
 
