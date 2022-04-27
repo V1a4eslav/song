@@ -84,37 +84,24 @@
          // justify-content: center;
       }
    }
-   &__signin,
-   &__btn {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: rem(20);
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      transition: all 0.3s ease 0s;
-   }
    // .slide-main-slider__btn
    &__btn {
-      padding: 16px 20px;
-      color: #55287d;
-      border-radius: 10px;
       background-color: #fff;
+      padding: 26px 30px;
+      color: #55287d;
       margin-right: rem(24);
-      @media (max-width: $tablet) {
-         padding: 10px 15px;
-         font-size: rem(14);
-      }
-      @media (min-width: $tablet) {
-         &:hover {
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-         }
-      }
       @media (max-width: $mobileSmall) {
          margin-right: 0;
       }
    }
    // .slide-main-slider__signin
    &__signin {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease 0s;
       align-self: flex-end;
       color: #fff;
       padding: 10px 29px 10px;
@@ -163,5 +150,25 @@
    }
    // .slide-main-slider__next
    &__next {
+   }
+}
+.btn {
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: rem(20);
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   transition: all 0.3s ease 0s;
+   border-radius: 4px;
+   font-weight: 600;
+   @media (max-width: $tablet) {
+      padding: 10px 15px;
+      font-size: rem(14);
+   }
+   @media (min-width: $tablet) {
+      &:hover {
+         // box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+         box-shadow: 0 0 5px rgba(255, 254, 255, 0.8);
+      }
    }
 }

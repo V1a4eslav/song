@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+'title':'Home'
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header/header.html',{})
+      <main class="page">
+         @@include('html/home/mainSlider.html',{})
+         @@include('html/home/sponsors.html',{})
+         @@include('html/home/description.html',{})
+         @@include('html/home/charts.html',{})
+         @@include('html/home/process.html',{})
+         @@include('html/home/projections.html',{})
+         @@include('html/home/gain-recognition.html',{})
+         @@include('html/home/chart.html',{})
+      </main>
+      @@include('html/footer.html',{})
+   </div>
+   <script src="./js/app.min.js"></script>
+</body>
+
+</html>

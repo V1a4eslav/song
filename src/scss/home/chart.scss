@@ -1,0 +1,107 @@
+@import "../base/animation/chart-svg.scss";
+@import "../base/animation/chart-text-animation.scss";
+.chart {
+   @include adaptiveValue("padding-top", 100, 20);
+   @include adaptiveValue("padding-bottom", 54, 20);
+   // .chart__body
+   &__body {
+      position: relative;
+   }
+   // .chart__title
+   &__title {
+      max-width: rem(466);
+      padding-top: rem(22);
+      @include adaptiveValue("padding-bottom", 317, 180, 1330, 767.98);
+      font-weight: 700;
+      @include adaptiveValue("font-size", 60, 30);
+      line-height: 123.7%;
+      color: #55287d;
+      @media (max-width: $mobile) {
+         max-width: 100%;
+         text-align: center;
+         padding-bottom: 0;
+         padding-top: 0;
+      }
+   }
+   // .chart__text
+   &__text {
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      padding-right: rem(44);
+      &::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 8px;
+         background: linear-gradient(90deg, #55287d 0%, #cd2288 100%);
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 0;
+         width: rem(38.45);
+         height: rem(44);
+         background-image: url("../img/icons/home/chart-arrow.svg");
+         background-size: 100%;
+      }
+   }
+   // .chart__img
+   &__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      svg {
+         max-width: 100%;
+         max-height: 100%;
+         object-fit: contain;
+         object-position: left bottom;
+      }
+      @media (max-width: $mobile) {
+         display: none;
+      }
+   }
+}
+
+// ===========================================
+.chart {
+   // .chart__body
+   &__body {
+   }
+   // .chart__title
+   &__title {
+      transform: translateY(10%);
+      opacity: 0;
+      transition: all 1s ease 0.3s;
+      &._anim-items.active {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
+   // // .chart__text
+   &__text {
+      transform: scale(0);
+      transition: transform 2s ease 0.3s;
+      &::after {
+         transform: scale(0);
+         transition: transform 1s ease 2s;
+      }
+      &::before {
+         opacity: 0;
+         transition: all 1s ease 2.4s;
+      }
+      &._anim-items.active {
+         transform: scale(1);
+         &::after {
+            transform: scale(1);
+         }
+         &::before {
+            transform: translateY(-50%);
+            opacity: 1;
+         }
+      }
+   }
+}

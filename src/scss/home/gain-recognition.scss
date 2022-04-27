@@ -1,0 +1,36 @@
+.gain-recognition {
+   @include adaptiveValue("padding-top", 41, 20);
+   @include adaptiveValue("padding-bottom", 84, 20);
+   border-bottom: 1px solid #000;
+   // .gain-recognition__title
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      @include adaptiveValue("font-size", 60, 30);
+      line-height: 123.7%;
+      @include adaptiveValue("margin-bottom", 55, 20);
+      color: $mainColor;
+   }
+   // .gain-recognition__inner
+   &__inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 15px;
+      @media (max-width: $mobileSmall) {
+         padding: 0 15px;
+      }
+   }
+   // .gain-recognition__item
+   &__item {
+      @media (max-width: $pc) {
+         max-width: 100px;
+         img {
+            max-width: 100%;
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         max-width: 60px;
+      }
+   }
+}

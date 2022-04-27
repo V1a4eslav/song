@@ -37,6 +37,7 @@ body {
    display: flex;
    flex-direction: column;
    overflow: hidden;
+   font-family: $fontFamily;
    // Прижимаем footer
    > main {
       flex: 1 1 auto;
@@ -46,6 +47,14 @@ body {
       min-width: 0;
    }
 }
+
 @import "./header/header";
 @import "./home/mainSlider";
 @import "./home/sponsors";
+@import "./home/description";
+@import "./home/charts";
+@import "./home/process";
+@import "./home/projections";
+@import "./home/gain-recognition";
+@import "./home/chart";
+@import "./footer/footer";

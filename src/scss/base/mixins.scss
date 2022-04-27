@@ -66,7 +66,7 @@
 	@if ($yIntersection==0) {
 		$yIntersection: 0.000001;
 	}
-	$flyValue: #{rem($yIntersection)} + #{$slope * 100}vw;
+	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
 
 	// Получение значения свойства
 	$propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
@@ -81,7 +81,10 @@
 	}
 	// Если не поддерживается clamp();
 	@supports not (#{$property}: $propertyValue) {
-		#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		#{$property}: calc(
+			#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
+				math.div($widthTo, 16)}
+		);
 	}
 
 	// Устанавливаем значения по умолчанию

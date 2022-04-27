@@ -1,17 +1,19 @@
 import * as functions from './modules/functions.js';
+import * as scrollAnimation from './modules/scrollAnimation.js';
+import * as spoller from './modules/spollers.js';
 import * as home from './home/variables.js';
 import * as slide from './home/templates/templatesForHtml.js';
 
 
-
 functions.isWebp();
+scrollAnimation.scrollAnimation();
+spoller.spollers();
 slide.createSlide()
 
 home.iconMenu.addEventListener("click", burgerFuntions);
 
 function burgerFuntions(e) {
    if (home.iconMenu && e.target.closest('.icon-menu')) {
-      console.log(this);
       this.classList.toggle('menu-open')
       document.body.classList.toggle('lock')
       if (this.classList.contains('menu-open')) {
