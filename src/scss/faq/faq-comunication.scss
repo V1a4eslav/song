@@ -1,0 +1,77 @@
+.faq-comunication {
+   position: relative;
+   background: linear-gradient(90deg, #cd2288 0%, #8700ff 100%);
+   color: #fff;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: url("../img/faq/massageBg.png");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: 100%;
+   }
+   // .faq-comunication__body
+   &__body {
+      position: relative;
+      @include adaptiveValue("padding-top", 183, 50);
+      @include adaptiveValue("padding-bottom", 229, 50);
+   }
+   // .faq-comunication__title
+   &__title {
+      @include adaptiveValue("margin-bottom", 64, 20);
+   }
+   // .faq-comunication__list
+   &__list {
+      margin-bottom: 117px;
+      @include adaptiveValue("margin-bottom", 117, 30);
+   }
+   // .faq-comunication__btn
+   &__btn {
+      padding: 23px 50px;
+      background-color: $violet;
+      @media (max-width: $tablet) {
+         padding: 20px 35px;
+      }
+      @media (max-width: $mobile) {
+         padding: 10px 20px;
+      }
+   }
+}
+
+.list-faq-comunication {
+   max-width: 600px;
+   // .list-faq-comunication__item
+   &__item {
+      display: flex;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 15);
+      }
+   }
+   // .list-faq-comunication__img
+   &__img {
+      align-self: flex-start;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include adaptiveValue("flex-basis", 50, 25);
+      @include adaptiveValue("height", 50, 16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+         max-height: 100%;
+         max-width: 100%;
+      }
+   }
+   // .list-faq-comunication__text
+   &__text {
+      font-family: $fontFamilyP;
+      line-height: 123.7%;
+      letter-spacing: 0.01em;
+      @include adaptiveValue("font-size", 40, 16);
+      @include adaptiveValue("margin-left", 30, 5);
+   }
+}

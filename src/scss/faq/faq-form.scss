@@ -1,0 +1,128 @@
+.faq-form {
+   @include adaptiveValue("padding-top", 128, 40);
+   @include adaptiveValue("padding-bottom", 202, 40);
+   // .faq-form__form
+   &__form {
+   }
+}
+.form-faq {
+   // .form-faq__title
+   &__title {
+      margin-bottom: 32px;
+   }
+   // .form-faq__body
+   &__body {
+      display: flex;
+      @include adaptiveValue("column-gap", 112, 30);
+      margin-bottom: 80px;
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         row-gap: 46px;
+         margin-bottom: 30px;
+      }
+   }
+   // .form-faq__column
+   &__column {
+      flex: 0 1 560px;
+      @media (max-width: $mobile) {
+         flex: 0 1 100%;
+      }
+   }
+   // .form-faq__input
+   &__input {
+      width: 100%;
+      border-bottom: 2px solid $violet;
+      padding-bottom: 6px;
+      padding-top: 6px;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: $violet;
+      &:not(:last-child) {
+         margin-bottom: 46px;
+      }
+      &::placeholder {
+         font-family: $fontFamilyP;
+         font-weight: 300;
+         @include adaptiveValue("font-size", 20, 16);
+         line-height: 123.7%;
+         color: $violet;
+         opacity: 0.8;
+      }
+   }
+   // .form-faq__radio-inputs
+   &__radio-inputs {
+      padding-bottom: 33px;
+   }
+   // .form-faq__label
+   &__label {
+      font-weight: 500;
+      font-family: $fontFamilyP;
+      line-height: 123.7%;
+      @include adaptiveValue("font-size", 20, 16);
+      color: $violet;
+      margin-bottom: 17px;
+   }
+   // .form-faq__btn
+   &__btn {
+      background-color: $violet;
+      padding: 26px 32px;
+      color: #fff;
+      @media (max-width: $mobile) {
+         padding: 10px 20px;
+      }
+   }
+}
+.inputs-body {
+   display: flex;
+   column-gap: 25px;
+   // .inputs-body__item
+   &__item {
+      // .inputs-body__label
+      &__label {
+      }
+      input {
+         position: absolute;
+         z-index: -1;
+         opacity: 0;
+      }
+      input + label {
+         position: relative;
+         padding-bottom: 33px;
+      }
+      input + label:not(:checked) {
+         cursor: pointer;
+      }
+      input + label::before {
+         content: "";
+         width: 20px;
+         height: 20px;
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: #bba9cb;
+         border-radius: 50%;
+      }
+      input + label::after {
+         content: "";
+         width: 7px;
+         height: 7px;
+         position: absolute;
+         bottom: 6.5px;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: transparent;
+         border-radius: 50%;
+      }
+      input:checked + label {
+         &::before {
+            background-color: $violet;
+         }
+      }
+      input:checked + label {
+         &::after {
+            background-color: #fff;
+         }
+      }
+   }
+}

@@ -1,6 +1,7 @@
 // SPOLLERS
 export function spollers() {
    const spollersArray = document.querySelectorAll('[data-spollers]');
+   console.log(spollersArray);
    if (spollersArray.length > 0) {
       // Получение обычных слойлеров у которых нет параметров в атрибуте data-spollers
       const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {

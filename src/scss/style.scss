@@ -49,6 +49,7 @@ body {
 }
 
 @import "./header/header";
+
 @import "./home/mainSlider";
 @import "./home/sponsors";
 @import "./home/description";
@@ -57,4 +58,9 @@ body {
 @import "./home/projections";
 @import "./home/gain-recognition";
 @import "./home/chart";
+
+@import "./faq/faq-spollers";
+@import "./faq/faq-comunication";
+@import "./faq/faq-form";
+
 @import "./footer/footer";

@@ -1,0 +1,83 @@
+.faq-spollers {
+   padding-top: rem(20);
+   @include adaptiveValue("padding-bottom", 93, 40);
+   @media (max-width: $tablet) {
+      padding-top: rem(100);
+   }
+   // .faq-spollers__title
+   &__title {
+      text-align: center;
+      span {
+         display: inline-block;
+         background: linear-gradient(90deg, #55287d 0%, #cd2288 100%);
+         border-radius: rem(84);
+         font-weight: 700;
+         @include adaptiveValue("font-size", 60, 20);
+         @include adaptiveValue("padding-top", 23, 10);
+         @include adaptiveValue("padding-bottom", 23, 10);
+         @include adaptiveValue("padding-left", 130, 40);
+         @include adaptiveValue("padding-right", 130, 40);
+         color: #ffffff;
+         text-transform: uppercase;
+      }
+   }
+   // .faq-spollers__body
+   &__body {
+      @include adaptiveValue("padding-top", 58, 30);
+   }
+}
+.spollers-faq {
+   &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 30);
+   }
+   // .spollers-faq__btn
+   &__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgb(85, 40, 125, 0.3);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 12px;
+      width: 100%;
+      &._active {
+         .spollers-faq__icon svg {
+            transform: rotate(-45deg);
+         }
+      }
+   }
+   // .spollers-faq__title
+   &__title {
+      font-family: $fontFamilyP;
+      @include adaptiveValue("font-size", 27, 16);
+      line-height: 123.7%;
+      text-transform: uppercase;
+      color: $violet;
+      text-align: left;
+   }
+   // .spollers-faq__icon
+   &__icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptiveValue("height", 35, 16);
+      svg {
+         transition: transform 0.3s ease 0s;
+         height: 100%;
+      }
+      // &.active {
+      //    svg {
+      //       transform: rotate(-45deg);
+      //    }
+      // }
+   }
+
+   // .spollers-faq__text
+   &__text {
+      font-weight: 300;
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: 174.7%;
+      letter-spacing: 0.015em;
+      color: #55287d;
+   }
+}
