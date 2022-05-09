@@ -1,22 +1,46 @@
 <section class="faq-form">
    <div class="faq-form__container">
-      <form class="faq-form__form form-faq">
+      <form class="faq-form__form form-faq _valid-form form-group" name="faqForm">
          <h2 class="form-faq__title title">Contact</h2>
          <div class="form-faq__body">
             <div class="form-faq__column">
-               <input class="form-faq__input" name="Your Name" type="text" placeholder="Your Name">
-               <input class="form-faq__input" name="Alias/Stage Name" type="text" placeholder="Alias/Stage Name">
-               <input class="form-faq__input" name="Company" type="text" placeholder="Company">
-               <input class="form-faq__input" name="Contact Number" type="text" placeholder="Contact Number">
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Your Name" data-type="name" type="text"
+                     placeholder="Your Name">
+                  <span class="form-faq__tips tips tips-hidden"></span>
+               </div>
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Alias/Stage Name" type="text"
+                     placeholder="Alias/Stage Name">
+                  <span class="form-faq__tips tips tips-hidden"></span>
+               </div>
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Company" type="text" placeholder="Company">
+                  <span class="form-faq__tips tips tips-hidden"></span>
+               </div>
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Contact Number" type="tel"
+                     placeholder="Contact Number">
+                  <span class="form-faq__tips tips tips-hidden"></span>
+               </div>
             </div>
             <div class="form-faq__column">
-               <input class="form-faq__input" name="Email Address" type="text" placeholder="Email Address">
-               <input class="form-faq__input" name="Zip/Post Code" type="text" placeholder="Zip/Post Code">
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Email Address" type="email"
+                     placeholder="Email Address">
+                  <span class="form-faq__tips tips tips-hidden">vfbgfngn</span>
+               </div>
+               <div class="form-faq__input-body field-parent">
+                  <input class="form-faq__input _valid-input" name="Zip/Post Code" type="text"
+                     placeholder="Zip/Post Code">
+                  <span class="form-faq__tips tips tips-hidden"></span>
+               </div>
                <div class="form-faq__radio-inputs">
                   <h3 class="form-faq__label">Preferrd Method Of Contact</h3>
-                  <div class="inputs-body">
+                  <div class="inputs-body field-parent">
                      <div class="inputs-body__item">
-                        <input type="radio" name="socials" id="telegram">
+                        <input class="_valid-input" data-type="customCheckbox" type="radio" name="socials"
+                           id="telegram">
                         <label class="inputs-body__label" for="telegram">
                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +60,8 @@
                         </label>
                      </div>
                      <div class="inputs-body__item">
-                        <input type="radio" name="socials" id="whatsapp">
+                        <input class="_valid-input" data-type="customCheckbox" type="radio" name="socials"
+                           id="whatsapp">
                         <label class="inputs-body__label" for="whatsapp">
                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +101,7 @@
                         </label>
                      </div>
                      <div class="inputs-body__item">
-                        <input type="radio" name="socials" id="phone" checked>
+                        <input class="_valid-input" data-type="customCheckbox" type="radio" name="socials" id="phone">
                         <label class="inputs-body__label" for="phone">
                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +113,7 @@
                         </label>
                      </div>
                      <div class="inputs-body__item">
-                        <input type="radio" name="socials" id="post">
+                        <input class="_valid-input" data-type="customCheckbox" type="radio" name="socials" id="post">
                         <label class="inputs-body__label" for="post">
                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +124,7 @@
                            </svg>
                         </label>
                      </div>
+                     <span class="form-faq__tips tips tips-hidden"></span>
                   </div>
                </div>
             </div>

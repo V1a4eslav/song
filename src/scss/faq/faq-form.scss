@@ -28,6 +28,14 @@
          flex: 0 1 100%;
       }
    }
+   // .form-faq__input-body
+   &__input-body {
+      position: relative;
+      width: 100%;
+      &:not(:last-child) {
+         margin-bottom: 46px;
+      }
+   }
    // .form-faq__input
    &__input {
       width: 100%;
@@ -37,9 +45,6 @@
       padding-left: 5px;
       padding-right: 5px;
       color: $violet;
-      &:not(:last-child) {
-         margin-bottom: 46px;
-      }
       &::placeholder {
          font-family: $fontFamilyP;
          font-weight: 300;
@@ -73,6 +78,7 @@
    }
 }
 .inputs-body {
+   position: relative;
    display: flex;
    column-gap: 25px;
    // .inputs-body__item

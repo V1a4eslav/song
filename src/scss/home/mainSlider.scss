@@ -70,6 +70,26 @@
             transform: scale(1.1);
          }
       }
+      &.play svg {
+         animation: move 1.5s infinite linear;
+      }
+      @keyframes move {
+         0% {
+            transform: rotate(0deg) scale(1);
+            background: transparent;
+            border-radius: 50%;
+         }
+         50% {
+            transform: rotate(180deg) scale(0.8);
+            background: linear-gradient(90deg, #55287d 0%, #cd2288 100%);
+            border-radius: 50%;
+         }
+         100% {
+            transform: rotate(360deg) scale(1);
+            background: transparent;
+            border-radius: 50%;
+         }
+      }
    }
    // .slide-main-slider__button
    &__button {
@@ -90,6 +110,9 @@
       padding: 26px 30px;
       color: #55287d;
       margin-right: rem(24);
+      @media (max-width: $tablet) {
+         padding: 10px 17px;
+      }
       @media (max-width: $mobileSmall) {
          margin-right: 0;
       }

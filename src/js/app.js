@@ -1,4 +1,5 @@
 import * as functions from './modules/functions.js';
+import * as forms from './modules/forms.js';
 import * as scrollAnimation from './modules/scrollAnimation.js';
 import * as spoller from './modules/spollers.js';
 import * as home from './home/variables.js';
@@ -8,7 +9,7 @@ import * as slide from './home/templates/templatesForHtml.js';
 functions.isWebp();
 scrollAnimation.scrollAnimation();
 spoller.spollers();
-slide.createSlide()
+// slide.createSlide()
 
 home.iconMenu.addEventListener("click", burgerFuntions);
 
