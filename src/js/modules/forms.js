@@ -25,11 +25,27 @@ const tips = {
 const forms = document.querySelectorAll('._valid-form');
 if (forms.length > 0) {
    forms.forEach(form => {
-      form.querySelectorAll('._valid-input').forEach(elem => {
-         elem.addEventListener('blur', () => checkInput(elem));
+      const btn = form.querySelector('button[type="submit"]');
+      const tips = form.querySelectorAll('.tips');
+      checkInputsValueBlur(form);
+      btn.addEventListener("click", function (e) {
+         e.preventDefault();
+         form.querySelectorAll('._valid-input').forEach(elem => {
+            checkInput(elem);
+         });
+         [...tips].some(span => span.classList.contains('tips-wrong')) ? alert('Заполни поля все') : alert('Красаучик');
       });
    });
 }
+
+function checkInputsValueBlur(form) {
+   form.addEventListener('click', (e) => {
+      if (e.target.closest('._valid-form') && e.target.classList.contains('_valid-input')) {
+         e.target.addEventListener('blur', () => checkInput(e.target))
+      }
+   })
+}
+
 
 function checkInput(elem) {
    const type = elem.getAttribute('data-type') ? elem.getAttribute('data-type') : elem.type;
@@ -93,8 +109,10 @@ function checkInput(elem) {
    }
 
    if (type === 'customCheckbox') {
-      if (!elem.checked) {
-         tipMessage(elem, tips.tipsEn.tips.required, true);
+      const elemList = elem.closest('.form-group').querySelectorAll('[data-type="customCheckbox"]');
+      const isChecked = [...elemList].some(elem => elem.checked);
+      if (!isChecked) {
+         tipMessage(elem, tips.tipsEn.required, true);
          return true;
       } else {
          tipMessage(elem, tips.tipsEn.success, false);
@@ -103,23 +121,16 @@ function checkInput(elem) {
    };
 }
 
-
 function tipMessage(elem, tip, status) {
    const mainParent = elem.closest('.form-group');
    const fieldParent = elem.closest('.field-parent');
    const tipElementHtml = fieldParent.querySelector('.tips');
 
    if (!status) {
-      mainParent.classList.remove('error');
-      mainParent.classList.add('success');
-      mainParent.setAttribute('data-error', tip);
       tipElementHtml.classList.remove('tips-hidden', 'tips-wrong');
       tipElementHtml.classList.add('tips-success', 'tips-visibility');
       tipElementHtml.textContent = tip;
    } else {
-      mainParent.classList.add('error');
-      mainParent.classList.remove('success');
-      mainParent.setAttribute('data-error', tip);
       tipElementHtml.classList.remove('tips-hidden', 'tips-success');
       tipElementHtml.classList.add('tips-wrong', 'tips-visibility');
       tipElementHtml.textContent = tip;
