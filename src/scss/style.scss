@@ -49,6 +49,7 @@ body {
 }
 
 @import "./header/header";
+@import "./header/header-2";
 
 @import "./home/mainSlider";
 @import "./home/sponsors";
@@ -62,5 +63,8 @@ body {
 @import "./faq/faq-spollers";
 @import "./faq/faq-comunication";
 @import "./faq/faq-form";
+
+@import "./services/mainBlock";
+@import "./services/mostPopular";
 
 @import "./footer/footer";

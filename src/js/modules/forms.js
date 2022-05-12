@@ -46,7 +46,6 @@ function checkInputsValueBlur(form) {
    })
 }
 
-
 function checkInput(elem) {
    const type = elem.getAttribute('data-type') ? elem.getAttribute('data-type') : elem.type;
 
@@ -108,8 +107,8 @@ function checkInput(elem) {
       }
    }
 
-   if (type === 'customCheckbox') {
-      const elemList = elem.closest('.form-group').querySelectorAll('[data-type="customCheckbox"]');
+   if (type === 'customRadio') {
+      const elemList = elem.closest('.form-group').querySelectorAll('[data-type="customRadio"]');
       const isChecked = [...elemList].some(elem => elem.checked);
       if (!isChecked) {
          tipMessage(elem, tips.tipsEn.required, true);
@@ -122,7 +121,6 @@ function checkInput(elem) {
 }
 
 function tipMessage(elem, tip, status) {
-   const mainParent = elem.closest('.form-group');
    const fieldParent = elem.closest('.field-parent');
    const tipElementHtml = fieldParent.querySelector('.tips');
 

@@ -1,5 +1,4 @@
 @import "../base/animation/chart-svg.scss";
-@import "../base/animation/chart-text-animation.scss";
 .chart {
    @include adaptiveValue("padding-top", 100, 20);
    @include adaptiveValue("padding-bottom", 54, 20);

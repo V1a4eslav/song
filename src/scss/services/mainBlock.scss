@@ -1,0 +1,95 @@
+.services-page {
+   padding-top: 396px;
+   padding-bottom: 260px;
+   background-image: url("../img/services-img/womanBg.png");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   @media (max-width: $tablet) {
+      padding-top: rem(130);
+      padding-bottom: rem(80);
+   }
+   // .services-page__body
+   &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   // .services-page__title
+   &__title {
+      font-family: $fontFamily;
+      font-size: rem(138);
+      @include adaptiveValue("font-size", 138, 40);
+      line-height: 123.7%;
+      letter-spacing: 0.025em;
+      text-transform: capitalize;
+      color: #ffffff;
+      margin-bottom: rem(30);
+   }
+   // .services-page__buttons
+   &__buttons {
+      display: flex;
+      column-gap: 30px;
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         column-gap: 0;
+         row-gap: 20px;
+      }
+   }
+   &__create-link,
+   &__signin-link {
+      text-align: center;
+      font-family: $fontFamilyP;
+      font-weight: 500;
+      @include adaptiveValue("font-size", 18, 14);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      @include adaptiveValue("padding-top", 22, 10);
+      @include adaptiveValue("padding-bottom", 22, 10);
+   }
+   // .services-page__create-link
+   &__create-link {
+      @include adaptiveValue("padding-left", 40, 20);
+      @include adaptiveValue("padding-right", 40, 20);
+      background: linear-gradient(90deg, #cd2288 0%, #55287d 100%);
+      border-radius: 78px;
+      transition: transform 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
+   }
+   // .services-page__signin-link
+   &__signin-link {
+      position: relative;
+      @include adaptiveValue("padding-left", 95, 30);
+      @include adaptiveValue("padding-right", 95, 30);
+      width: fit-content;
+      &::after {
+         content: "";
+         position: absolute;
+         display: inline-block;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         width: 100%;
+         height: 4px;
+         border-radius: 5px;
+         background-image: linear-gradient(90deg, #55287d 0%, #cd2288 100%);
+         transition: transform 0.3s ease 0s;
+      }
+      @media (max-width: $mobileSmall) {
+         margin: 0 auto;
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            &::after {
+               transform: scale(0.8);
+            }
+         }
+      }
+   }
+}
