@@ -1,0 +1,104 @@
+@import "../base/animation/animation";
+
+.services-project {
+   @include adaptiveValue("padding-top", 136, 50);
+   @include adaptiveValue("padding-bottom", 112, 50);
+   background-color: #000;
+   color: #fff;
+   // .services-project__wrapper
+   &__wrapper {
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 50%;
+         height: 100%;
+         background-image: url("../img/services-img/project.png");
+         background-size: auto 100%;
+         background-repeat: no-repeat;
+      }
+      @media (max-width: $pc) {
+         &::before {
+            width: 100%;
+            background-size: cover;
+         }
+      }
+      @media (max-width: $mobile) {
+         &::before {
+            background-position: right center;
+         }
+      }
+   }
+   // .services-project__container
+   &__container {
+      position: relative;
+   }
+   // .services-project__inner
+   &__inner {
+      max-width: 50%;
+      @media (max-width: $pc) {
+         padding: 20px;
+         max-width: 80%;
+         margin: 0 auto;
+         background-color: rgba(0, 0, 0, 0.6);
+      }
+   }
+   // .services-project__title
+   &__title {
+      margin-bottom: 28px;
+   }
+   // .services-project__items
+   &__items {
+   }
+   // .services-project__column
+   &__column {
+      display: flex;
+      column-gap: 20px;
+      margin-bottom: 30px;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         row-gap: 30px;
+      }
+   }
+   // .services-project__item
+   &__item {
+      padding: 20px 0;
+      flex: 0 0 calc(50% - 10px);
+   }
+   // .services-project__btn
+   &__btn {
+      margin-bottom: 30px;
+      animation: animBtn2 1.3s infinite;
+   }
+   // .services-project__footer-text
+   &__footer-text {
+   }
+}
+.item-services-project {
+   // .item-services-project__body
+   &__body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+   }
+   // .item-services-project__img
+   &__img {
+      margin-bottom: 26px;
+   }
+   // .item-services-project__title
+   &__title {
+      font-weight: 600;
+      margin-bottom: 30px;
+   }
+   // .item-services-project__text
+   &__text {
+      font-weight: 200;
+      margin-bottom: 30px;
+   }
+   // .item-services-project__price
+   &__price {
+      margin-top: auto;
+   }
+}

@@ -1,0 +1,143 @@
+.services-slider {
+   @include adaptiveValue("padding-top", 72, 30);
+   @include adaptiveValue("padding-bottom", 187, 30);
+   background-color: #000;
+   color: #fff;
+   // .services-slider__container
+   &__container {
+   }
+   // .services-slider__block
+   &__block {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+      margin-bottom: 44px;
+      @media (max-width: $pc) {
+         flex-direction: column;
+         row-gap: 30px;
+         justify-content: flex-start;
+      }
+   }
+   // .services-slider__title
+   &__title {
+      @media (max-width: $pc) {
+         align-self: center;
+         text-align: center;
+      }
+   }
+   // .services-slider__switchs
+   &__switchs {
+      align-self: flex-end;
+      display: inline-flex;
+      align-items: center;
+      column-gap: 37px;
+      @media (max-width: $pc) {
+         align-self: center;
+      }
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         row-gap: 10px;
+      }
+   }
+   // .services-slider__label
+   &__label {
+      font-size: rem(35);
+      line-height: 123.7%;
+   }
+   // .services-slider__btn-prev
+   // .services-slider__btn-next
+   &__btn-prev,
+   &__btn-next {
+      svg path {
+         transition: all 0.5s ease 0s;
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            svg path {
+               fill: rgba(205, 34, 136, 0.8);
+            }
+         }
+      }
+   }
+   &__btn-prev.swiper-button-disabled,
+   &__btn-next.swiper-button-disabled {
+      opacity: 0.4;
+      cursor: auto;
+      pointer-events: none;
+   }
+   // .services-slider__btn-prev
+   &__btn-prev {
+      svg {
+         transform: rotate(-180deg);
+      }
+   }
+   // .services-slider__btn-next
+   &__btn-next {
+      margin-left: 15px;
+   }
+   // .services-slider__content
+   &__content {
+      max-height: 646px;
+   }
+   // .services-slider__wrapper
+   &__wrapper {
+   }
+   // .services-slider__slide
+   &__slide {
+      position: relative;
+      overflow: hidden;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: transparent;
+         z-index: 1;
+      }
+      img {
+         pointer-events: none;
+         transform: scale(1.1);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: top;
+         transition: all 0.3s ease 0s;
+      }
+      span {
+         pointer-events: none;
+         transition: all 0.8s ease 0s;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%) scale(0);
+         z-index: 1;
+         @include adaptiveValue("font-size", 70, 25);
+      }
+      &.swiper-slide-active {
+         &::before {
+            background-color: rgba(85, 40, 125, 0.5);
+         }
+         img {
+            transform: scale(1);
+         }
+         span {
+            transform: translate(-50%) scale(1);
+         }
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            &::before {
+               background-color: rgba(85, 40, 125, 0.5);
+            }
+            img {
+               transform: scale(1);
+            }
+            span {
+               transform: translate(-50%) scale(1);
+            }
+         }
+      }
+   }
+}

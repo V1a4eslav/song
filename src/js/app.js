@@ -4,12 +4,14 @@ import * as scrollAnimation from './modules/scrollAnimation.js';
 import * as spoller from './modules/spollers.js';
 import * as home from './home/variables.js';
 import * as slide from './home/templates/templatesForHtml.js';
+import * as services from './services/services-slider.js';
 
 
 functions.isWebp();
 scrollAnimation.scrollAnimation();
 spoller.spollers();
 // slide.createSlide()
+services.servicesSlider();
 
 home.iconMenu.addEventListener("click", burgerFuntions);
 

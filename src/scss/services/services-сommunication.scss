@@ -1,0 +1,116 @@
+.services-communication {
+   @include adaptiveValue("padding-top", 140, 40);
+   @include adaptiveValue("padding-bottom", 249, 40);
+   position: relative;
+   color: $violet;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: url("../img/faq/massageBg.png");
+      background-position: right top;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      @media (max-width: $mobileSmall) {
+         display: none;
+      }
+   }
+
+   // .services-communication__container
+   &__container {
+   }
+   // .services-communication__body
+   &__body {
+      position: relative;
+      max-width: 45%;
+      @media (max-width: $mobileSmall) {
+         max-width: 100%;
+      }
+   }
+   // .services-communication__title
+   &__title {
+      @include adaptiveValue("margin-bottom", 45, 25);
+   }
+   // .services-communication__items
+   &__items {
+      @include adaptiveValue("margin-bottom", 70, 35);
+   }
+   // .services-communication__item
+   &__item {
+   }
+   // .services-communication__btn
+   &__btn {
+      display: inline-block;
+      color: #fff;
+      padding: 29px 52px;
+      background-color: $violet;
+      border: 3px solid transparent;
+      transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         &:hover {
+            background-color: #fff;
+            border-color: $violet;
+            color: $violet;
+         }
+      }
+      @media (max-width: $tablet) {
+         padding: 20px 35px;
+      }
+      @media (max-width: $mobile) {
+         padding: 10px 20px;
+      }
+   }
+}
+
+.item-communication {
+   &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 63, 20);
+   }
+   // .item-communication__title
+   &__title {
+      font-family: $fontFamilyP;
+      @include adaptiveValue("font-size", 55, 25);
+      margin-bottom: 15px;
+   }
+   // .item-communication__text
+   &__text {
+      font-family: $fontFamilyP;
+      font-weight: 300;
+      @include adaptiveValue("font-size", 21, 14);
+      line-height: 141.2%;
+      // .item-communication__text_mastercard
+      &_mastercard {
+         &::before {
+            content: "";
+            width: 24px;
+            height: 14px;
+            display: inline-block;
+            background-image: url("../img/icons/services-icons/communication/master.svg");
+            background-repeat: no-repeat;
+            margin: 0 10px;
+         }
+      }
+      // .item-communication__text_bitcoin
+      &_bitcoin {
+         position: relative;
+         @include adaptiveValue("padding-right", 28, 20);
+         &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            max-height: 100%;
+            background-image: url("../img/icons/services-icons/communication/bitcoin.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+         }
+      }
+   }
+}

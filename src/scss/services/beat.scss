@@ -1,0 +1,202 @@
+@import "../base/animation/animation";
+.beat {
+   position: relative;
+   background-color: #000;
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -70px;
+      width: 50%;
+      height: 100%;
+      background-image: url("../img/services-img/beatBg.png");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+   }
+   @media (min-width: 1920px) {
+      &::before {
+         background-position: left center;
+      }
+   }
+   @media (max-width: 1920px) {
+      &::before {
+         background-position: center;
+      }
+   }
+   @media (max-width: $pc) {
+      &::before {
+         width: 100%;
+         right: 0;
+         background-size: cover;
+      }
+   }
+   // .brat__bg-img
+   &__bg-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+      @media (max-width: $mobileSmall) {
+         display: none;
+      }
+   }
+   // .beat__container
+   &__container {
+   }
+   // .beat__body
+   &__body {
+      width: 50%;
+      color: #fff;
+      @include adaptiveValue("padding-top", 100, 37);
+      padding-bottom: 37px;
+      @media (max-width: $pc) {
+         position: relative;
+         width: 100%;
+      }
+   }
+   // .beat__title
+   &__title {
+      margin-bottom: rem(20);
+   }
+   // .beat__items
+   &__items {
+      display: flex;
+      column-gap: 50px;
+      padding-bottom: 20px;
+      @media (max-width: $pc) {
+         justify-content: center;
+         row-gap: 30px;
+         flex-wrap: wrap;
+      }
+   }
+   // .beat__item
+   &__item {
+   }
+   // .beat__btn-block
+   &__btn-block {
+      padding: 35px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      column-gap: 37px;
+      @media (max-width: $pc) {
+         justify-content: flex-start;
+      }
+      @media (max-width: $mobile) {
+         row-gap: 20px;
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+   // .beat__btn
+   &__btn {
+      animation: animBtn2 1.3s infinite;
+   }
+   // .beat__btn-block-text
+   &__btn-block-text {
+      @media (max-width: $pc) {
+         max-width: 380px;
+      }
+   }
+}
+.item-beat {
+   flex: 0 1 calc((100% - 50px * 2) / 3);
+   @media (max-width: $pc) {
+      flex: 0 1 280px;
+   }
+   // .item-beat__body
+   &__body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      @media (max-width: $pc) {
+         padding: 20px 10px;
+         border-radius: 30%;
+         border: 1px solid $violet;
+      }
+   }
+   // .item-beat__img
+   &__img {
+      height: 71px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      img {
+         object-fit: contain;
+      }
+   }
+   // .item-beat__text
+   &__text {
+      margin-bottom: 40px;
+   }
+   // .item-beat__price
+   &__price {
+      margin-top: auto;
+   }
+}
+.btn-gradient {
+   display: inline-block;
+   padding: 13px 31px;
+   border-style: solid;
+   border-color: transparent;
+   border-width: 1px;
+   border-radius: 78px;
+   background: linear-gradient(#000, #000) padding-box, linear-gradient(90deg, #8700ff 0%, #cd2288 100%) border-box;
+   span {
+      white-space: nowrap;
+      font-family: $fontFamilyP;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.02em;
+      background: linear-gradient(90deg, #8700ff 0%, #cd2288 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+}
+// .services-text
+.services-title {
+   font-family: $fontFamily;
+   font-size: 25px;
+   line-height: 123.7%;
+   letter-spacing: 0.015em;
+}
+// .services-price
+.services-price {
+   font-family: $fontFamilyP;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 106.7%;
+   color: #cd2288;
+}
+// .services-text
+.services-text {
+   position: relative;
+   font-family: $fontFamilyP;
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 145.7%;
+   letter-spacing: 0.03em;
+   opacity: 0.8;
+   padding-left: 45px;
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 30px;
+      height: 100%;
+      background-image: url("../img/icons/services-icons/beat/beat-custom.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: left top;
+   }
+}

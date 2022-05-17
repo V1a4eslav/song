@@ -1,0 +1,116 @@
+@import "../base/animation/animation";
+
+.song {
+   padding: 123px 0 78px;
+   background-color: #000;
+   color: #fff;
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url("../img/services-img/song.png");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+   }
+   @media (min-width: 1920px) {
+      &::before {
+         right: 60%;
+         background-position: right;
+      }
+   }
+   @media (max-width: $pc) {
+      &::before {
+         width: 100%;
+         background-size: cover;
+         background-position: center;
+      }
+   }
+   // .song__container
+   &__container {
+   }
+   // .song__body
+   &__body {
+      max-width: percent(786, 1300);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      @media (max-width: $pc) {
+         background-color: rgb(0, 0, 0, 0.6);
+         border-radius: 30px;
+         max-width: 100%;
+         padding: 20px 10px;
+      }
+   }
+   // .song__header
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 37px;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         row-gap: 30px;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+   // .song__title
+   &__title {
+      margin-left: 50px;
+      @media (max-width: $mobile) {
+         margin-left: 0;
+      }
+   }
+   // .song__btn
+   &__btn {
+      animation: animBtn2 1.3s infinite;
+   }
+   // .song__items
+   &__items {
+      display: flex;
+      margin-bottom: 48px;
+      column-gap: 10px;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+   // .song__column
+   &__column {
+      flex: 0 0 calc(50% - 5px);
+   }
+   // .song__item
+   &__item {
+      position: relative;
+      padding: 20px 0 20px 50px;
+      &::before {
+         content: "";
+         width: 21.34px;
+         height: 31px;
+         position: absolute;
+         top: 20px;
+         left: 0;
+         background-image: url("../../img/icons/services-icons/song.svg");
+      }
+   }
+   // .song__text
+   &__text {
+      font-weight: 200;
+      span {
+         font-weight: 600;
+      }
+   }
+   // .song__price
+   &__price {
+      margin-top: 26px;
+   }
+   // .song__footer-text
+   &__footer-text {
+      @media (max-width: $pc) {
+         max-width: 600px;
+      }
+   }
+}

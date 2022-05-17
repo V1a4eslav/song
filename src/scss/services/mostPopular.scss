@@ -39,15 +39,13 @@
    }
 }
 .tariff {
-   width: 100%;
    height: 100%;
 
    // .tariff__body
    &__body {
       width: 100%;
-      height: 100%;
 
-      padding: 37px 39px 67px;
+      padding: 37px 36px 67px;
       border-radius: 56px;
 
       position: relative;
@@ -138,7 +136,6 @@
    }
    // .tariff__price
    &__price {
-      margin-top: auto;
       font-family: $fontFamilyP;
       font-weight: 500;
       font-size: rem(40);
