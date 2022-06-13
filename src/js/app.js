@@ -1,31 +1,26 @@
+import { DOM } from "./variables.js";
+import { burgerFuntions } from './modules/burger.js';
+import { forms } from './modules/forms.js';
 import * as functions from './modules/functions.js';
-import * as forms from './modules/forms.js';
 import * as scrollAnimation from './modules/scrollAnimation.js';
 import * as spoller from './modules/spollers.js';
-import * as home from './home/variables.js';
-import * as slide from './home/templates/templatesForHtml.js';
-import * as services from './services/services-slider.js';
+import * as slide from './modules/createSlideForMainSlider.js';
+import * as services from './modules/services-slider.js';
+import './modules/modal/modalAuth.js';
 
+DOM.iconMenu.addEventListener("click", burgerFuntions);
 
 functions.isWebp();
+forms();
 scrollAnimation.scrollAnimation();
 spoller.spollers();
 // slide.createSlide()
 services.servicesSlider();
 
-home.iconMenu.addEventListener("click", burgerFuntions);
 
-function burgerFuntions(e) {
-   if (home.iconMenu && e.target.closest('.icon-menu')) {
-      this.classList.toggle('menu-open')
-      document.body.classList.toggle('lock')
-      if (this.classList.contains('menu-open')) {
-         home.headerNav.classList.add('open')
-      } else {
-         home.headerNav.classList.remove('open')
-      }
-   }
-}
+
+
+
 
 
 

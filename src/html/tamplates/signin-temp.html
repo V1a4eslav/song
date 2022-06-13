@@ -1,0 +1,31 @@
+<template type="text" id="modalAuth">
+   <div class="modal" data-target="{dataTarget}">
+      <div class="modal__overlay">
+         <div class="modal__wrapper">
+            <div class="modal__content">
+               {closeModalButton}
+               <div class="modal__header header-modal">{headerModal}</div>
+               <span class="modal__delimiter"></span>
+               <form class="modal__form _valid-form" name="modal__form_login">
+                  <div class="modal__inputs">
+                     {field}
+                  </div>
+                  <div class="modal__footer footer-modal">
+                     <button class="footer-modal__submit-btn" type="submit">SIGN IN</button>
+                     <p class="footer-modal__agree-text">I agree to TypeSong Terms & Privacy Policy</p>
+                     <div class="footer-modal__text-items">
+                        {dataPath}
+                        <a class="footer-modal__recover-link" href="#">Forgot your
+                           password?</a>
+                        <p class="footer-modal__text">Didn't receive confirmation link?
+                        </p>
+                        <p class="footer-modal__text">Didn't receive unlock instructions?
+                        </p>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</template>

@@ -1,0 +1,21 @@
+@keyframes backOutUp {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   20% {
+      opacity: 0.7;
+      transform: translateY(0) scale(0.7);
+   }
+   to {
+      opacity: 0.7;
+      transform: translateY(-100%) scale(0.7);
+   }
+}
+.animate__backOutUp {
+   animation-name: backOutUp;
+}
+// .animate__animated {
+//    animation-duration: 1s;
+//    animation-fill-mode: both;
+// }

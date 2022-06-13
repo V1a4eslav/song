@@ -1,21 +1,26 @@
+@import "../base/animation/animation";
 .viral {
+   @include adaptiveValue("padding-top", 107, 30);
+   @include adaptiveValue("padding-bottom", 184, 30);
    // .viral__container
    &__container {
+      position: relative;
+   }
+   // .viral__wrapper
+   &__wrapper {
+      @include adaptiveValue("padding-top", 400, 300, 1330, 992);
+      @include adaptiveValue("padding-bottom", 250, 150, 1330, 992);
    }
    // .viral__inner
    &__inner {
-      // padding-bottom: 200px;
+      position: relative;
       display: flex;
       flex-direction: column;
-      background-image: url("../img/services-img/viral/viralBg.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 61% center;
    }
    // .viral__title
    &__title {
       color: $violet;
-      margin-bottom: 72px;
+      @include adaptiveValue("margin-bottom", 72, 30);
       align-self: center;
    }
    // .viral__descriptions
@@ -23,7 +28,13 @@
       display: flex;
       justify-content: space-between;
       column-gap: 100px;
-      margin-bottom: 145px;
+      @include adaptiveValue("margin-bottom", 145, 40);
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         row-gap: 35px;
+      }
    }
    // .viral__column
    &__column {
@@ -53,23 +64,93 @@
       background-image: linear-gradient(90deg, #cd2288 0%, #8700ff 100%);
       border-radius: 5px;
       color: #fff;
+      animation: animBtn2 1.3s infinite;
       @media (max-width: $mobile) {
          padding: 10px 20px;
       }
    }
-}
-
-.socials {
-   // .socials__facebook
-   &__facebook {
+   @media (min-width: $tablet) {
+      &__container {
+         &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: percent(282, 1280);
+            width: 157px;
+            height: 127px;
+            background-image: url("../img/services-img/viral/1l.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+         &::after {
+            content: "";
+            position: absolute;
+            left: 2%;
+            bottom: 0;
+            width: percent(367, 1330);
+            height: percent(299, 1280);
+            background-image: url("../../img/services-img/viral/3l.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+      }
+      &__wrapper {
+         &::before {
+            content: "";
+            position: absolute;
+            right: -32px;
+            top: 26px;
+            width: percent(387, 1330);
+            height: percent(314, 1280);
+            background-image: url("../img/services-img/viral/1r.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+         &::after {
+            content: "";
+            position: absolute;
+            left: percent(356, 1330);
+            top: 64px;
+            width: percent(256, 1330);
+            height: percent(211, 1280);
+            background-image: url("../img/services-img/viral/2l.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+      }
+      &__inner {
+         background-image: url("../img/services-img/viral/viralBg.png");
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: 61% center;
+         &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: percent(259, 1330);
+            height: percent(211, 1280);
+            background-image: url("../img/services-img/viral/2r.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+      }
    }
-   // .socials__insta
-   &__insta {
-   }
-   // .socials__twit
-   &__twit {
-   }
-   // .socials__youtube
-   &__youtube {
+   .socials__facebook,
+   .socials__insta,
+   .socials__youtube,
+   .socials__twit {
+      background-color: rgba(85, 40, 125, 0.14);
+      svg path {
+         fill: #833dc1;
+      }
+      @media (min-width: $tablet) {
+         &:hover {
+            background-color: #833dc1;
+            svg path {
+               fill: #fff;
+            }
+         }
+      }
    }
 }

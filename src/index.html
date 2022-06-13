@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-'title':'SERVICES'
+'title':'User-Auth'
 })
 
 <body>
    <div class="wrapper">
-      @@include('html/header/header-2.html',{})
+      @@include('html/header/header.html',{})
       <main class="page">
-         @@include('html/services/mainBlock.html',{})
-         @@include('html/services/mostPopular.html',{})
-         @@include('html/services/beat.html',{})
-         @@include('html/services/services-slider.html',{})
-         @@include('html/services/song.html',{})
-         @@include('html/services/services-project.html',{})
-         @@include('html/services/services-сommunication.html',{})
-         @@include('html/services/viral.html',{})
+         <section class="auth">
+            <div class="modals">
+               @@include('html/tamplates/signin-temp.html',{})
+            </div>
+         </section>
       </main>
       @@include('html/footer.html',{})
    </div>

@@ -1,5 +1,7 @@
 import axios from "axios";
+import { DOM } from "../variables.js";
 import Swiper, { Navigation } from 'swiper';
+import { htmlToElement } from './functions.js';
 
 
 export function createSlide() {
@@ -22,12 +24,11 @@ export function createSlide() {
    }
 
    async function renderItem() {
-      const mainSliderWrapper = document.querySelector(".main-slider__wrapper");
-      if (mainSliderWrapper) {
+      if (DOM.mainSliderWrapper) {
          const { tracks } = await getSongs();
          if (tracks.length > 0) {
             await tracks.forEach((item) => {
-               mainSliderWrapper.appendChild(createItem(item));
+               DOM.mainSliderWrapper.appendChild(createItem(item));
             });
             new Swiper(".main-slider__content", {
                modules: [Navigation],
@@ -40,26 +41,32 @@ export function createSlide() {
             const slides = document.querySelectorAll('.slide-main-slider');
             const audioArr = document.querySelectorAll('.sound');
             const btns = document.querySelectorAll('.slide-main-slider__play');
+
             if (slides.length > 0) {
-               mainSliderWrapper.addEventListener("click", function (e) {
-                  const currentBtn = document.querySelector('.swiper-slide-active .slide-main-slider__play');
-                  const currentAudio = document.querySelector('.swiper-slide-active audio');
-                  if (e.target.classList.contains('slide-main-slider__play') || e.target.closest('.slide-main-slider__play')) {
-                     if (!currentBtn.classList.contains('play')) {
-                        removeAllClassPlay(btns);
-                        pausedAudio(audioArr);
-                        currentBtn.classList.add('play');
-                        currentAudio.play();
-                     } else {
-                        removeAllClassPlay(btns);
-                        pausedAudio(audioArr)
-                     }
-                  } else {
-                     console.log('no');
-                  }
-               });
+               DOM.mainSliderWrapper.addEventListener("click", getCurrentItems);
+            }
+
+            function getCurrentItems(e) {
+               const currentBtn = document.querySelector('.swiper-slide-active .slide-main-slider__play');
+               const currentAudio = document.querySelector('.swiper-slide-active audio');
+               if (e.target.classList.contains('slide-main-slider__play') || e.target.closest('.slide-main-slider__play')) {
+                  playAudioOnMainSlider(currentBtn, currentAudio, audioArr, btns);
+               }
             }
          }
+      }
+   }
+
+
+   function playAudioOnMainSlider(currentBtn, currentAudio, audioArray, btnsPlay) {
+      if (!currentBtn.classList.contains('play')) {
+         removeAllClassPlay(btnsPlay);
+         pausedAudio(audioArray);
+         currentBtn.classList.add('play');
+         currentAudio.play();
+      } else {
+         removeAllClassPlay(btnsPlay);
+         pausedAudio(audioArray)
       }
    }
 
@@ -83,14 +90,8 @@ export function createSlide() {
          .replace("{genre}", type)
          .replace("{musician}", subtitle)
          .replace("{title}", title)
-         // .replace("{background}", background)
          .replace("{audio}", uri)
       return htmlToElement(templateItemHtml);
-   }
-   function htmlToElement(html) {
-      const template = document.createElement('template');
-      template.innerHTML = html;
-      return template.content.firstChild;
    }
    renderItem()
 }

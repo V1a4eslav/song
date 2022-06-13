@@ -1,0 +1,25 @@
+@keyframes swing {
+   20% {
+      transform: rotate(15deg);
+   }
+   40% {
+      transform: rotate(-10deg);
+   }
+   60% {
+      transform: rotate(5deg);
+   }
+   80% {
+      transform: rotate(-5deg);
+   }
+   to {
+      transform: rotate(0deg);
+   }
+}
+.animate__swing {
+   animation-name: swing;
+   transform-origin: top center;
+}
+.animate__animated {
+   animation-duration: 1s;
+   animation-fill-mode: both;
+}

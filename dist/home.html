@@ -10,7 +10,7 @@
 
 <body>
    <div class="wrapper">
-      <header class="header">
+      <header class="header fix-block">
    <div class="header__container">
       <div class="header__content">
          <a class="header__logo logo" href="./home.html">
@@ -23,11 +23,11 @@
             <div class="nav-header">
                <a class="nav-header__link" href="./home.html">Home</a>
                <a class="nav-header__link" href="">Create</a>
-               <a class="nav-header__link" href="./index.html">Services</a>
+               <a class="nav-header__link" href="./services.html">Services</a>
                <a class="nav-header__link" href="./faq.html">Contact / FAQ</a>
             </div>
          </nav>
-         <a class="header__user user-header" href="#">
+         <a class="header__user user-header" href="./index.html" data-path="signin">
             <div class="user-header__text">Login</div>
             <div class="user-header__icon">
                <img src="./img/icons/header-user.png" alt="">
@@ -46,44 +46,44 @@
       <div class="main-slider__wrapper swiper-wrapper">
       </div>
       <template type="text" id="main-slider-slide">
-         <div class="main-slider__slide slide-main-slider swiper-slide">
-            <div class="slide-main-slider__container">
-               <audio class="sound" src="{audio}">
-                  <source src="" type="audio/mpeg">
-               </audio>
-               <div class="slide-main-slider__genre">#{genre}</div>
-               <div class="slide-main-slider__musician">{musician}</div>
-               <div class="slide-main-slider__typesong">"{title}"</div>
-               <buttont class="slide-main-slider__play">
-                  <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path
-                        d="M23 0C10.4367 0 0.25 10.1867 0.25 22.75C0.25 35.3133 10.4367 45.5 23 45.5C35.5633 45.5 45.75 35.3133 45.75 22.75C45.75 10.1867 35.5633 0 23 0ZM30.3176 23.1004L19.227 31.1695C19.1662 31.2132 19.0945 31.2393 19.0198 31.2449C18.9452 31.2505 18.8704 31.2354 18.8037 31.2013C18.7371 31.1672 18.6811 31.1154 18.642 31.0516C18.6029 30.9877 18.5822 30.9143 18.582 30.8395V14.7113C18.5818 14.6363 18.6023 14.5627 18.6414 14.4986C18.6804 14.4345 18.7364 14.3825 18.8032 14.3484C18.87 14.3142 18.9449 14.2992 19.0197 14.305C19.0945 14.3108 19.1662 14.3372 19.227 14.3813L30.3176 22.4453C30.37 22.4824 30.4127 22.5315 30.4422 22.5884C30.4717 22.6454 30.4871 22.7087 30.4871 22.7729C30.4871 22.837 30.4717 22.9003 30.4422 22.9573C30.4127 23.0142 30.37 23.0633 30.3176 23.1004Z"
-                        fill="white" stroke="#96A4A4" />
-                  </svg>
-               </buttont>
-               <div class="slide-main-slider__button">
-                  <button class="slide-main-slider__btn btn">CREATE A PROJECT</button>
-                  <a class="slide-main-slider__signin" href="#">Sign in</a>
-               </div>
-               <div class="slide-main-slider__switches">
-                  <div class="slide-main-slider__prev swiper-button-prev">
-                     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.7"
-                           d="M29.0037 8.50691C29.3942 8.11638 29.3942 7.48322 29.0037 7.09269L22.6397 0.728735C22.2492 0.33821 21.616 0.33821 21.2255 0.728735C20.835 1.11926 20.835 1.75242 21.2255 2.14295L26.8823 7.7998L21.2255 13.4567C20.835 13.8472 20.835 14.4803 21.2255 14.8709C21.616 15.2614 22.2492 15.2614 22.6397 14.8709L29.0037 8.50691ZM0.241211 8.7998L28.2965 8.7998L28.2965 6.7998L0.241211 6.7998L0.241211 8.7998Z"
-                           fill="#fff" />
-                     </svg>
-                  </div>
-                  <div class="slide-main-slider__next swiper-button-next">
-                     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.7"
-                           d="M29.0037 8.50691C29.3942 8.11638 29.3942 7.48322 29.0037 7.09269L22.6397 0.728735C22.2492 0.33821 21.616 0.33821 21.2255 0.728735C20.835 1.11926 20.835 1.75242 21.2255 2.14295L26.8823 7.7998L21.2255 13.4567C20.835 13.8472 20.835 14.4803 21.2255 14.8709C21.616 15.2614 22.2492 15.2614 22.6397 14.8709L29.0037 8.50691ZM0.241211 8.7998L28.2965 8.7998L28.2965 6.7998L0.241211 6.7998L0.241211 8.7998Z"
-                           fill="#fff" />
-                     </svg>
-                  </div>
-               </div>
+   <div class="main-slider__slide slide-main-slider swiper-slide">
+      <div class="slide-main-slider__container">
+         <audio class="sound" src="{audio}">
+            <source src="" type="audio/mpeg">
+         </audio>
+         <div class="slide-main-slider__genre">#{genre}</div>
+         <div class="slide-main-slider__musician">{musician}</div>
+         <div class="slide-main-slider__typesong">"{title}"</div>
+         <buttont class="slide-main-slider__play">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M23 0C10.4367 0 0.25 10.1867 0.25 22.75C0.25 35.3133 10.4367 45.5 23 45.5C35.5633 45.5 45.75 35.3133 45.75 22.75C45.75 10.1867 35.5633 0 23 0ZM30.3176 23.1004L19.227 31.1695C19.1662 31.2132 19.0945 31.2393 19.0198 31.2449C18.9452 31.2505 18.8704 31.2354 18.8037 31.2013C18.7371 31.1672 18.6811 31.1154 18.642 31.0516C18.6029 30.9877 18.5822 30.9143 18.582 30.8395V14.7113C18.5818 14.6363 18.6023 14.5627 18.6414 14.4986C18.6804 14.4345 18.7364 14.3825 18.8032 14.3484C18.87 14.3142 18.9449 14.2992 19.0197 14.305C19.0945 14.3108 19.1662 14.3372 19.227 14.3813L30.3176 22.4453C30.37 22.4824 30.4127 22.5315 30.4422 22.5884C30.4717 22.6454 30.4871 22.7087 30.4871 22.7729C30.4871 22.837 30.4717 22.9003 30.4422 22.9573C30.4127 23.0142 30.37 23.0633 30.3176 23.1004Z"
+                  fill="white" stroke="#96A4A4" />
+            </svg>
+         </buttont>
+         <div class="slide-main-slider__button">
+            <button class="slide-main-slider__btn btn">CREATE A PROJECT</button>
+            <a class="slide-main-slider__signin" href="#">Sign in</a>
+         </div>
+         <div class="slide-main-slider__switches">
+            <div class="slide-main-slider__prev swiper-button-prev">
+               <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.7"
+                     d="M29.0037 8.50691C29.3942 8.11638 29.3942 7.48322 29.0037 7.09269L22.6397 0.728735C22.2492 0.33821 21.616 0.33821 21.2255 0.728735C20.835 1.11926 20.835 1.75242 21.2255 2.14295L26.8823 7.7998L21.2255 13.4567C20.835 13.8472 20.835 14.4803 21.2255 14.8709C21.616 15.2614 22.2492 15.2614 22.6397 14.8709L29.0037 8.50691ZM0.241211 8.7998L28.2965 8.7998L28.2965 6.7998L0.241211 6.7998L0.241211 8.7998Z"
+                     fill="#fff" />
+               </svg>
+            </div>
+            <div class="slide-main-slider__next swiper-button-next">
+               <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.7"
+                     d="M29.0037 8.50691C29.3942 8.11638 29.3942 7.48322 29.0037 7.09269L22.6397 0.728735C22.2492 0.33821 21.616 0.33821 21.2255 0.728735C20.835 1.11926 20.835 1.75242 21.2255 2.14295L26.8823 7.7998L21.2255 13.4567C20.835 13.8472 20.835 14.4803 21.2255 14.8709C21.616 15.2614 22.2492 15.2614 22.6397 14.8709L29.0037 8.50691ZM0.241211 8.7998L28.2965 8.7998L28.2965 6.7998L0.241211 6.7998L0.241211 8.7998Z"
+                     fill="#fff" />
+               </svg>
             </div>
          </div>
-      </template>
+      </div>
+   </div>
+</template>
    </div>
 </section>
          <section class="page__sponsorrs sponsorrs">
@@ -418,11 +418,11 @@
          </div>
          <div class="contact-footer__footer-links links-footer">
             <nav class="links-footer__menu">
-               <a class="links-footer__link" href="#">Home</a>
+               <a class="links-footer__link" href="./home.html">Home</a>
                <a class="links-footer__link" href="#">Create</a>
-               <a class="links-footer__link" href="#">Services</a>
-               <a class="links-footer__link" href="#">FAQ</a>
-               <a class="links-footer__link" href="#">Contact</a>
+               <a class="links-footer__link" href="./services.html">Services</a>
+               <a class="links-footer__link" href="./faq.html">FAQ</a>
+               <a class="links-footer__link" href="./faq.html">Contact</a>
                <a class="links-footer__link" href="#">Terms</a>
             </nav>
             <form class="links-footer__form footer-form _valid-form form-group" name="footerForm" novalidate>
