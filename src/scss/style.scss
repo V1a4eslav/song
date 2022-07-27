@@ -47,6 +47,25 @@ body {
       min-width: 0;
    }
 }
+.page {
+   padding-top: 100px;
+   @media (max-width: $tablet) {
+      padding-top: 80px;
+   }
+}
+.animate__animated {
+   animation-duration: var(--transition-time);
+   animation-fill-mode: both;
+}
+.fade {
+   opacity: 0;
+   transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+   opacity: 1;
+   transition: opacity var(--transition-time);
+}
 
 @import "./header/header";
 @import "./header/header-2";
@@ -74,5 +93,6 @@ body {
 @import "./services/services-project";
 @import "./services/services-сommunication";
 @import "./services/viral";
+@import "./create/create";
 
 @import "./footer/footer";

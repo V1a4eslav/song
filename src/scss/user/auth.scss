@@ -9,9 +9,10 @@
    background-size: cover;
    background-position: center;
 }
-
-.modal {
+.modals {
    --transition-time: 1s;
+}
+.modal {
    &__overlay {
       position: fixed;
       left: 0;
@@ -44,8 +45,8 @@
       overflow: hidden;
       cursor: default;
    }
-   // .modal__close-btn
-   &__close-btn {
+   // .modal__close
+   &__close {
       display: inline-block;
       position: absolute;
       right: 0;
@@ -53,6 +54,11 @@
       padding: 5px;
       font-size: 20px;
       z-index: 3;
+      &.disabled {
+         opacity: 0.3;
+         outline: none;
+         cursor: auto;
+      }
    }
    // .modal__header
    &__header {
@@ -127,49 +133,49 @@
          margin-bottom: 20px;
       }
    }
-   // .header-modal__google-btn
-   //    &__google-btn {
-   //       background-color: #4caf50;
-   //       &::before {
-   //          content: "";
-   //          background-image: url("../img/user/auth/icons/google.svg");
-   //          border-right-color: #199c47;
-   //       }
-   //    }
-   //    // .header-modal__facebook-btn
-   //    &__facebook-btn {
-   //       background-color: #4c69ba;
-   //       &::before {
-   //          content: "";
-   //          background-image: url("../img/user/auth/icons/facebook.svg");
-   //          border-right-color: #364e92;
-   //       }
-   //    }
-   //    &__google-btn,
-   //    &__facebook-btn {
-   //       position: relative;
-   //       width: 100%;
-   //       border-radius: 70px;
-   //       padding-top: 19px;
-   //       padding-bottom: 19px;
-   //       font-weight: 700;
-   //       font-size: 17px;
-   //       line-height: 134.2%;
-   //       letter-spacing: 0.015em;
-   //       color: #ffffff;
-   //       &::before {
-   //          content: "";
-   //          position: absolute;
-   //          top: 0;
-   //          left: 0;
-   //          width: 60px;
-   //          height: 100%;
-   //          background-repeat: no-repeat;
-   //          background-position: center;
-   //          border-right-width: 1px;
-   //          border-right-style: solid;
-   //       }
-   //    }
+   //.header-modal__google-btn
+   &__google-btn {
+      background-color: #4caf50;
+      &::before {
+         content: "";
+         background-image: url("../../img/user/auth/icons/google.svg");
+         border-right-color: #199c47;
+      }
+   }
+   // .header-modal__facebook-btn
+   &__facebook-btn {
+      background-color: #4c69ba;
+      &::before {
+         content: "";
+         background-image: url("../../img/user/auth/icons/facebook.svg");
+         border-right-color: #364e92;
+      }
+   }
+   &__google-btn,
+   &__facebook-btn {
+      position: relative;
+      width: 100%;
+      border-radius: 70px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 134.2%;
+      letter-spacing: 0.015em;
+      color: #ffffff;
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 60px;
+         height: 100%;
+         background-repeat: no-repeat;
+         background-position: center;
+         border-right-width: 1px;
+         border-right-style: solid;
+      }
+   }
 }
 
 .footer-modal {
@@ -206,10 +212,17 @@
       margin-bottom: 35px;
    }
    // .footer-modal__signup-link
-   &__signup-link {
+   &__signup-link,
+   &__signin-link {
       font-family: inherit;
       color: #000;
       font-weight: 500;
+   }
+   &__signup-link,
+   &__signin-link,
+   &__recover-link {
+      width: fit-content;
+      align-self: center;
    }
    // .footer-modal__recover-link
    &__recover-link {
@@ -231,43 +244,9 @@
    }
 }
 
-.animate__animated {
-   animation-duration: var(--transition-time);
-   animation-fill-mode: both;
-}
-
 .field-parent {
 }
 .tips {
 }
 .tips-hidden {
-}
-
-.header-modal {
-   &__btn {
-      position: relative;
-      width: 100%;
-      border-radius: 70px;
-      padding-top: 19px;
-      padding-bottom: 19px;
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 134.2%;
-      letter-spacing: 0.015em;
-      text-transform: uppercase;
-      color: #fff;
-      // background-color: green;
-   }
-   #header-modal__btn_img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60px;
-      height: 100%;
-      // background-image: url("../../img/user/auth/icons/facebook.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      border-right-width: 1px;
-      border-right-style: solid;
-   }
 }

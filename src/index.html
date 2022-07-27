@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-'title':'User-Auth'
+'title':'Create'
 })
 
 <body>
    <div class="wrapper">
       @@include('html/header/header.html',{})
       <main class="page">
-         <section class="auth">
-            <div class="modals">
-               @@include('html/tamplates/signin-temp.html',{})
+         <section class="page__create create">
+            <div class="create__container">
+               <div class="create__steps">
+                  <div class="create__step active">
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <img src="@img/create/create-step-title/1.png" alt="">
+                        </div>
+                        <div class="create__step-title">Create</div>
+                     </div>
+                  </div>
+                  <div class="create__step">
+                     <div class="create__step-arrow">
+                        <img src="@img/create/create-step-title/4.png" alt="">
+                     </div>
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <img src="@img/create/create-step-title/2.png" alt="">
+                        </div>
+                        <div class="create__step-title">Payment</div>
+                     </div>
+                  </div>
+                  <div class="create__step">
+                     <div class="create__step-arrow">
+                        <img src="@img/create/create-step-title/4.png" alt="">
+                     </div>
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <img src="@img/create/create-step-title/3.png" alt="">
+                        </div>
+                        <div class="create__step-title">Submit</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="create__content">
+                  @@include('html/create/stepContent1.html',{})
+                  @@include('html/create/stepContent2.html',{})
+                  @@include('html/create/stepContent3.html',{})
+               </div>
             </div>
          </section>
       </main>

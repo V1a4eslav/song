@@ -1,0 +1,97 @@
+<form class="create__step-content" data-step="form" name="stepTwo">
+   <div class="step-content-two">
+      <div class="step-content-two__tabs" data-tabs="tab">
+         <div class="step-content-two__tabs-body" data-tabsparent>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="@img/icons/create/debit.svg" alt="debit">
+                  </div>
+                  <p class="step-content-two__btn-text">Credit/Debit Card</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="@img/icons/create/bank.svg" alt="bank">
+                  </div>
+                  <p class="step-content-two__btn-text">Bank Transfer</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="@img/icons/create/bitcoin.svg" alt="bitcoin">
+                  </div>
+                  <p class="step-content-two__btn-text">Bitcoin</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+         </div>
+         <div class="step-content-two__content">
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="card" data-card="cardBank">
+                  <div class="card__inner">
+                     <div class="card__front" data-card="front">
+                        <div class="card__front-logo" data-card="logo">
+                           <img src="@img/source/bank-svgrepo-com.svg" alt='logo-bank' data-card="defaultLogoImg">
+                        </div>
+                        <input class="card__front-number" type="text" id="card-number" placeholder="0000 0000 0000 0000"
+                           data-ccard="req">
+                        <div class="card__front-footer">
+                           <div class="card__front-footer-date">
+                              <input class="card__front-card-month" type="text" id="card-month" placeholder="MM"
+                                 disabled data-ccard="req">
+                              <span>/</span>
+                              <input class="card__front-card-year" type="text" id="card-year" placeholder="YY" disabled
+                                 data-ccard="req">
+                           </div>
+                           <div class="card__front-img" data-card="payBrand">
+                              <img src="@img/source/credit-card.svg" alt=" defaultBankBrandIcon"
+                                 data-card="defaultPayImg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card__back" data-card="back">
+                        <div class="card__back-line"></div>
+                        <input type="text" class="card__back-cvv" data-ccard="req" data-card="cardBackCvv" disabled>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="bank-transfer _valid-form form-group">
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-name">Name</label>
+                     <input id="bank-transfer-name" class="bank-transfer__input _valid-input" name="Your Name"
+                        data-type="name" type="text" placeholder="Your Name">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-address">Address</label>
+                     <input id="bank-transfer-address" class="bank-transfer__input _valid-input" name="Address"
+                        data-type="name" type="text" placeholder="Address">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-email">Email</label>
+                     <input id="bank-transfer-email" class="bank-transfer__input _valid-input" name="Email"
+                        data-type="email" type="email" placeholder="Email">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-tel">Contact Number</label>
+                     <input id="bank-transfer-tel" class="bank-transfer__input _valid-input" name="tel" data-type="tel"
+                        type="text" placeholder="Contact Number">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">content3</div>
+         </div>
+      </div>
+      <button type="button" class="step-content__submit" data-btn="next" disabled>Continue</button>
+   </div>
+</form>

@@ -28,6 +28,7 @@ export function forms() {
          const btn = form.querySelector('button[type="submit"]');
          const tips = form.querySelectorAll('.tips');
          checkInputsValueBlur(form);
+         if (!btn) return;
          btn.addEventListener("click", function (e) {
             e.preventDefault();
             form.querySelectorAll('._valid-input').forEach(elem => {
@@ -125,6 +126,20 @@ export function forms() {
             return true;
          } else if (!(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,15}$/.test(elem.value))) {
             tipMessage(elem, tips.tipsEn.easyPassword, true);
+            return true;
+         } else {
+            tipMessage(elem, tips.tipsEn.success, false);
+            return false;
+         }
+      };
+
+      if (type === 'passwordConfirm') {
+         const passwordElem = elem.closest('form').querySelector('input[name="password"]');
+         if (elem.value === "") {
+            tipMessage(elem, tips.tipsEn.required, true);
+            return true;
+         } else if (elem.value !== passwordElem.value) {
+            this.tipMessage(elem, tips.tipsEn.conform, true);
             return true;
          } else {
             tipMessage(elem, tips.tipsEn.success, false);

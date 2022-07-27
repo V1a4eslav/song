@@ -6,7 +6,16 @@ import * as scrollAnimation from './modules/scrollAnimation.js';
 import * as spoller from './modules/spollers.js';
 import * as slide from './modules/createSlideForMainSlider.js';
 import * as services from './modules/services-slider.js';
-import './modules/modal/modalAuth.js';
+import './modules/modal/modalIndex.js';
+import './modules/tabs/tabsIndex.js';
+// add modul noUiSlider
+import './modules/range/nouislider.min.js';
+import { range } from './modules/range/range.js';
+// =======================
+import './modules/select/select-app.js';
+import './modules/stepForm.js';
+import './modules/bankCard/bankCard-Index.js'
+
 
 DOM.iconMenu.addEventListener("click", burgerFuntions);
 
@@ -16,6 +25,7 @@ scrollAnimation.scrollAnimation();
 spoller.spollers();
 // slide.createSlide()
 services.servicesSlider();
+range();
 
 
 
