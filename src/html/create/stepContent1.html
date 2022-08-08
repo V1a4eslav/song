@@ -1,51 +1,53 @@
-<form action="#" class="create__step-content" data-step="form" name="stepOne">
+<form action="#" class="create__step-content _active" data-step="form" name="stepOne">
    <div class="step-content-one" data-spollers>
       <div class="step-content-one__item" data-stepItem="req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">Select</span>
          </button>
          <div class="step-content-one__item-wrapper">
-            <div class="step-content-one__item-inner">
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Beat" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="@img/create/select/1.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Beat</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Song" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="@img/create/select/2.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Song</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Lyrics" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="@img/create/select/3.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Lyrics</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="seleProjectct"
-                     data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="@img/create/select/4.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Project</span>
-               </label>
-            </div>
+            <fieldset>
+               <div class="step-content-one__item-inner">
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Beat" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="@img/create/select/1.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Beat</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Song" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="@img/create/select/2.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Song</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Lyrics" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="@img/create/select/3.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Lyrics</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="seleProjectct"
+                        data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="@img/create/select/4.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Project</span>
+                  </label>
+               </div>
+            </fieldset>
          </div>
       </div>
-      <div class="step-content-one__item" data-stepItem>
+      <div class="step-content-one__item" data-stepItem="not-req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">Choose artist style</span>
          </button>
          <div class="step-content-one__item-wrapper">
             <div class="step-content-one__input-body">
-               <input class="step-content-one__input" name="artist-style" data-type="text" type="text"
-                  placeholder="Choose artist style">
+               <input class="step-content-one__input" name="artist-style" data-check="inputField" data-type="text"
+                  type="text" placeholder="Choose artist style">
             </div>
          </div>
       </div>
@@ -70,7 +72,7 @@
             </div>
          </div>
       </div>
-      <div class="step-content-one__item" data-stepItem>
+      <div class="step-content-one__item" data-stepItem="not-req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">What song should it sound like?</span>
          </button>
@@ -78,7 +80,7 @@
             <p class="step-content-one__text">You may post up to 3 links</p>
             <div class="step-content-one__input-body">
                <input class="step-content-one__input step-content-one__input_placeholder" name="links" data-type="text"
-                  type="text" placeholder="You may post a link">
+                  type="text" placeholder="You may post a link" data-checkurl="3">
             </div>
          </div>
       </div>

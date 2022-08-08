@@ -46,8 +46,8 @@
       <main class="page">
          <section class="page__create create">
             <div class="create__container">
-               <div class="create__steps">
-                  <div class="create__step active">
+               <div class="create__steps" data-create="steps">
+                  <div class="create__step _active" data-step="title">
                      <div class="create__step-body">
                         <div class="create__step-icon">
                            <img src="./img/create/create-step-title/1.png" alt="">
@@ -55,7 +55,7 @@
                         <div class="create__step-title">Create</div>
                      </div>
                   </div>
-                  <div class="create__step">
+                  <div class="create__step" data-step="title">
                      <div class="create__step-arrow">
                         <img src="./img/create/create-step-title/4.png" alt="">
                      </div>
@@ -66,7 +66,7 @@
                         <div class="create__step-title">Payment</div>
                      </div>
                   </div>
-                  <div class="create__step">
+                  <div class="create__step" data-step="title">
                      <div class="create__step-arrow">
                         <img src="./img/create/create-step-title/4.png" alt="">
                      </div>
@@ -78,55 +78,58 @@
                      </div>
                   </div>
                </div>
-               <div class="create__content">
-                  <form action="#" class="create__step-content" data-step="form" name="stepOne">
+               <div class="create__content-wrapper">
+                  <div class="create__content" data-step="content-parent">
+                     <form action="#" class="create__step-content _active" data-step="form" name="stepOne">
    <div class="step-content-one" data-spollers>
       <div class="step-content-one__item" data-stepItem="req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">Select</span>
          </button>
          <div class="step-content-one__item-wrapper">
-            <div class="step-content-one__item-inner">
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Beat" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="./img/create/select/1.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Beat</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Song" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="./img/create/select/2.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Song</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="Lyrics" data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="./img/create/select/3.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Lyrics</span>
-               </label>
-               <label class="step-content-one__item-body">
-                  <input class="step-content-one__checkbox-item" type="checkbox" name="seleProjectct"
-                     data-check="checkbox">
-                  <div class="step-content-one__checkbox-img">
-                     <img src="./img/create/select/4.png" alt="">
-                  </div>
-                  <span class="step-content-one__checkbox-text">Project</span>
-               </label>
-            </div>
+            <fieldset>
+               <div class="step-content-one__item-inner">
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Beat" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="./img/create/select/1.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Beat</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Song" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="./img/create/select/2.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Song</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Lyrics" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="./img/create/select/3.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Lyrics</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="seleProjectct"
+                        data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <img src="./img/create/select/4.png" alt="">
+                     </div>
+                     <span class="step-content-one__checkbox-text">Project</span>
+                  </label>
+               </div>
+            </fieldset>
          </div>
       </div>
-      <div class="step-content-one__item" data-stepItem>
+      <div class="step-content-one__item" data-stepItem="not-req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">Choose artist style</span>
          </button>
          <div class="step-content-one__item-wrapper">
             <div class="step-content-one__input-body">
-               <input class="step-content-one__input" name="artist-style" data-type="text" type="text"
-                  placeholder="Choose artist style">
+               <input class="step-content-one__input" name="artist-style" data-check="inputField" data-type="text"
+                  type="text" placeholder="Choose artist style">
             </div>
          </div>
       </div>
@@ -151,7 +154,7 @@
             </div>
          </div>
       </div>
-      <div class="step-content-one__item" data-stepItem>
+      <div class="step-content-one__item" data-stepItem="not-req">
          <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
             <span class="step-content__title step-content-one__title">What song should it sound like?</span>
          </button>
@@ -159,7 +162,7 @@
             <p class="step-content-one__text">You may post up to 3 links</p>
             <div class="step-content-one__input-body">
                <input class="step-content-one__input step-content-one__input_placeholder" name="links" data-type="text"
-                  type="text" placeholder="You may post a link">
+                  type="text" placeholder="You may post a link" data-checkurl="3">
             </div>
          </div>
       </div>
@@ -174,7 +177,7 @@
       <button type="button" class="step-content__submit" data-btn="next" disabled>Continue</button>
    </div>
 </form>
-                  <form class="create__step-content" data-step="form" name="stepTwo">
+                     <form class="create__step-content" data-step="form" name="stepTwo">
    <div class="step-content-two">
       <div class="step-content-two__tabs" data-tabs="tab">
          <div class="step-content-two__tabs-body" data-tabsparent>
@@ -265,13 +268,382 @@
                   </div>
                </div>
             </div>
-            <div class="step-content-two__item" data-tabContent data-stepItem="req">content3</div>
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="bitcoin">
+                  <div class="bitcoin__inner">
+                     <p class="bitcoin__text-prompt">To pay, please send exact amount of BTC to the <span
+                           class="bitcoin__text-prompt_pink-color">given address</span>
+                     </p>
+                     <p class="bitcoin__address">3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5</p>
+                     <div class="bitcoin__price">
+                        <p class="bitcoin__price-btn"><span data-btc>0.06625066</span> BTC</p>
+                        <p class="bitcoin__price-usd">= <span data-usd>499.00</span> USD</p>
+                     </div>
+                     <div class="bitcoin__qr" data-qr></div>
+                     <p class="bitcoin__text">Click on the QR code opem in the wallet</p>
+                     <button class="bitcoin__btn" type="button" disabled>I Paid</button>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
       <button type="button" class="step-content__submit" data-btn="next" disabled>Continue</button>
    </div>
 </form>
-                  
+                     <form action="#" class="create__step-content" data-step="form" name="stepThree">
+   <div class="step-content-three" data-spollers>
+      <div class="step-content-three__item" data-stepItem="req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Select Genre</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <div class="step-content-three__item-inner">
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="pop" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.1.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Pop</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Rap" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.2.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Rap</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="hip-hop" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.3.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Hip hop</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="opera" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.4.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Opera</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="jazz" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.5.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Jazz</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="R&B" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.6.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">R&B</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="metal" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.7.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Metal</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="punk" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <img src="./img/create/select/3.8.png" alt="">
+                  </div>
+                  <span class="step-content-three__checkbox-text">Punk</span>
+               </label>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__upload-inner">
+            <button class="step-content-three__upload-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Do you have audio you want sampled?</button>
+            <div class="step-content-three__upload-wrapper">
+               <div class="step-content-three__upload-body">
+                  <div class="step-content-three__item-upload-column step-content-three__item-upload-column_input">
+                     <div class="step-content-three__item-upload-text">You may post a link</div>
+                     <div class="step-content-three__input-body">
+                        <input class="step-content-three__item-upload-input" type="text"
+                           placeholder="You may post a link">
+                     </div>
+                  </div>
+                  <div class="step-content-three__item-upload-column">
+                     <div class="step-content-three__item-upload-text"> You may upload audio file</div>
+                     <button class="step-content-three__item-upload-btn" type="button">UPLOAD AUDIO</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Emotions</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <fieldset class="step-content-three__checkbox-inner">
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Love" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Love</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Angry" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Angry</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Happy" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Happy</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Sad" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Sad</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Depressed"
+                     data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Depressed</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Rage" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Rage</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Peaceful"
+                     data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Peaceful</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Lonely" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Lonely</button>
+               </label>
+            </fieldset>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Mood & Feel</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <div class="step-content-three__item-text">(Choose up to 3)</div>
+            <fieldset class="step-content-three__checkbox-inner">
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Silly">
+                  <button class="step-content-three__checkbox-btn" type="button">Silly</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Dark">
+                  <button class="step-content-three__checkbox-btn" type="button">Dark</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Epic">
+                  <button class="step-content-three__checkbox-btn" type="button">Epic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Party">
+                  <button class="step-content-three__checkbox-btn" type="button">Party</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Aggressive">
+                  <button class="step-content-three__checkbox-btn" type="button">Aggressive</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Chill">
+                  <button class="step-content-three__checkbox-btn" type="button">Chill</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Club">
+                  <button class="step-content-three__checkbox-btn" type="button">Club</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Celebration">
+                  <button class="step-content-three__checkbox-btn" type="button">Celebration</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Gangster">
+                  <button class="step-content-three__checkbox-btn" type="button">Gangster</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Sexy">
+                  <button class="step-content-three__checkbox-btn" type="button">Sexy</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Parody">
+                  <button class="step-content-three__checkbox-btn" type="button">Parody</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Romance">
+                  <button class="step-content-three__checkbox-btn" type="button">Romance</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Break-up">
+                  <button class="step-content-three__checkbox-btn" type="button">Break-up</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Confident">
+                  <button class="step-content-three__checkbox-btn" type="button">Confident</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Cocky">
+                  <button class="step-content-three__checkbox-btn" type="button">Cocky</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Confident">
+                  <button class="step-content-three__checkbox-btn" type="button">Confident</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Calm">
+                  <button class="step-content-three__checkbox-btn" type="button">Calm</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Relaxed">
+                  <button class="step-content-three__checkbox-btn" type="button">Relaxed</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Sympathetic">
+                  <button class="step-content-three__checkbox-btn" type="button">Sympathetic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Energetic">
+                  <button class="step-content-three__checkbox-btn" type="button">Energetic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Stressed">
+                  <button class="step-content-three__checkbox-btn" type="button">Stressed</button>
+               </label>
+            </fieldset>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__prefernces-inner">
+            <button class="step-content-three__prefernces-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Prefernces</button>
+            <div class="step-content-three__item-wrapper">
+               <p class="step-content-three__item-text">Is there anything you do NOT
+                  want to hear in your project?</p>
+               <textarea class="step-content-three__item-textarea" name="Prefernces"
+                  placeholder="You may post up to 3 links" data-checkurl="3"></textarea>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item choosen" data-stepItem="not-req">
+         <div class="step-content-three__question-inner">
+            <button class="step-content-three__question-reset active" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Do you require viral marceting, promotion and distribution?</button>
+            <div class="step-content-three__item-wrapper">
+               <div class="step-content-three__question-btns">
+                  <div class="step-content-three__question-radio-btns" data-choosen>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="marketing">
+                        <span class="step-content-three__radio-text">Yes</span>
+                     </label>
+                     <span class="step-content-three__radio-separator">/</span>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="marketing" checked>
+                        <span class="step-content-three__radio-text">No</span>
+                     </label>
+                  </div>
+                  <div class="step-content-three__show-btn">
+                     <button class="show-text" type="button" data-show>Show less</button>
+                     <svg class="show-arrow up" width="16" height="21" viewBox="0 0 16 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M0.929612 6.65685L7.29357 0.292893C7.6841 -0.0976313 8.31726 -0.0976313 8.70779 0.292893L15.0717 6.65685C15.4623 7.04738 15.4623 7.68054 15.0717 8.07107C14.6812 8.46159 14.0481 8.46159 13.6575 8.07107L9.00068 3.41421L9.00068 21L7.00068 21L7.00068 3.41421L2.34383 8.07107C1.9533 8.46159 1.32014 8.46159 0.929612 8.07107C0.539088 7.68054 0.539088 7.04738 0.929612 6.65685Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+               </div>
+               <p class="step-content-three__question-text open" data-text>
+                  A single deal with additional question, distribution and promotion. Best way to guarantee streams,
+                  and generate a quick buzz! TypeSong will work extensively behind the scenes negotiating the best deal
+                  for your single
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item choosen" data-stepItem="not-req">
+         <div class="step-content-three__question-inner">
+            <button class="step-content-three__question-reset active" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Shall we submit your finished project to record label representatives?</button>
+            <div class="step-content-three__item-wrapper">
+               <div class="step-content-three__question-btns">
+                  <div class="step-content-three__question-radio-btns" data-choosen>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="question">
+                        <span class="step-content-three__radio-text">Yes</span>
+                     </label>
+                     <span class="step-content-three__radio-separator">/</span>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="question" checked>
+                        <span class="step-content-three__radio-text">No</span>
+                     </label>
+                  </div>
+                  <div class="step-content-three__show-btn">
+                     <button class="show-text" type="button" data-show>Show less</button>
+                     <svg class="show-arrow up" width="16" height="21" viewBox="0 0 16 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M0.929612 6.65685L7.29357 0.292893C7.6841 -0.0976313 8.31726 -0.0976313 8.70779 0.292893L15.0717 6.65685C15.4623 7.04738 15.4623 7.68054 15.0717 8.07107C14.6812 8.46159 14.0481 8.46159 13.6575 8.07107L9.00068 3.41421L9.00068 21L7.00068 21L7.00068 3.41421L2.34383 8.07107C1.9533 8.46159 1.32014 8.46159 0.929612 8.07107C0.539088 7.68054 0.539088 7.04738 0.929612 6.65685Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+               </div>
+               <p class="step-content-three__question-text open" data-text>
+                  At no additional cost, send us your completed song and we pitch your song/project to music labels, and
+                  negotiate third party brand sponsorships with companies such as Universal Music Group, Netflix, Nike
+                  and many more(only available for Single Deals
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__prefernces-inner">
+            <button class="step-content-three__prefernces-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Special requirements</button>
+            <div class="step-content-three__item-wrapper">
+               <textarea class="step-content-three__item-textarea" name="SpecialRequirements"
+                  placeholder="Your requirements" data-check="inputField"></textarea>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item-accept" data-accept data-stepItem="req">
+         <label>
+            <input class="step-content-three__checkbox-accept" type="checkbox" name="accept" data-input="accept">
+            <span class="step-content-three__custom-checkbox"></span>
+            <span class="step-content-three__custom-checkbox-text">I accept terms and conditions</span>
+         </label>
+      </div>
+   </div>
+   <button type="button" class="step-content__submit" data-btn="finnish" disabled>Finnish</button>
+</form>
+                  </div>
                </div>
             </div>
          </section>
@@ -351,6 +723,7 @@
    </div>
 </footer>
    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.3/qrcode.min.js"></script>
    <script src="./js/app.min.js"></script>
 </body>
 

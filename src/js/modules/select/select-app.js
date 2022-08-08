@@ -1,5 +1,4 @@
 import { Select } from './selectPlugin.js';
-import { checkChoosenClass } from '../stepForm.js';
 
 class CreateSelect extends Select {
    constructor(selector, options) {
@@ -14,8 +13,11 @@ class CreateSelect extends Select {
    }
 }
 
+function checkChoosenClass(item) {
+   !item.classList.contains('choosen') ? item.classList.add('not-valid') : item.classList.remove('not-valid')
+}
 
-const createSelect = new CreateSelect('[data-select]', {
+export const createSelect = new CreateSelect('[data-select]', {
    placeholder: 'Have my song added to radio playlists',
    // defaultId: '2',
    data: [

@@ -297,32 +297,29 @@ export class CardBank {
    events() {
       this.$inputNumber.addEventListener('input', (e) => {
          this._getValues(e);
+         this._checkNumberCard(this.getBrand, this.number);
       });
       this.$inputMonth.addEventListener('input', (e) => {
          this._checkInputMonth(e);
+         this._checkDate(this.$inputMonth, this.$inputYear);
       });
       this.$inputYear.addEventListener('input', (e) => {
          this._checkInputYear(e);
+         this._checkDate(this.$inputMonth, this.$inputYear);
       });
       this.$cvvInput.addEventListener('input', (e) => {
          this._checkCVV(e);
-         // this._checkValidField(this.$cardReqField);
-         this.options.isChanged(this);
       });
       this.$inputNumber.addEventListener('blur', (e) => {
          this._checkNumberCard(this.getBrand, this.number);
-         // this._checkValidField(this.$cardReqField);
          this.options.isChanged(this);
       });
       this.$inputMonth.addEventListener('blur', (e) => {
          e.target.value = this._addZero(e.target.value);
          this._checkDate(this.$inputMonth, this.$inputYear);
-         // this._checkValidField(this.$cardReqField);
-         this.options.isChanged(this);
       });
       this.$inputYear.addEventListener('blur', (e) => {
          this._checkDate(this.$inputMonth, this.$inputYear);
-         this.options.isChanged(this);
       });
    }
 
@@ -330,10 +327,10 @@ export class CardBank {
       if (month.value && year.value) {
          const monthValue = +(month.value);
          const yearValue = +(year.value);
-         const currentMonth = new Date().getMonth() + 1;
+         const currentMonth = +(new Date().getMonth() + 1);
          const currentYear = +((new Date().getFullYear() + '').slice(-2));
 
-         if ((monthValue < currentMonth && yearValue <= currentYear) || (yearValue > (+(String(currentYear).slice(-2)) + 3))) {
+         if ((monthValue > currentMonth && yearValue < currentYear) || (monthValue < currentMonth && yearValue <= currentYear) || (yearValue > (+(String(currentYear).slice(-2)) + 3))) {
             this.$inputMonth.classList.add('_notvalid');
             this.$inputYear.classList.add('_notvalid');
             this.$inputMonth.classList.remove('_valid');
@@ -344,25 +341,8 @@ export class CardBank {
             this.$inputMonth.classList.add('_valid');
             this.$inputYear.classList.add('_valid');
          }
-
-         //==================== Этот для тестов==================================д
-         function mmonth() {
-            return console.log(`monthValue < currentMonth ${monthValue < currentMonth}`);
-         }
-
-         function yyear() {
-            return console.log(`yearValue <= currentYear ${yearValue <= currentYear}`);
-         }
-         function b() {
-            let a = mmonth()
-            let c = yyear()
-            return (a === c);
-         }
-         console.log('b' + ' ' + b());
       }
    }
-   //==================== Этот для проверок==================================д
-
 
    _checkInputMonth(e) {
       e.target.value = this._onlyNumber(e.target.value).substr(0, 2);

@@ -159,7 +159,7 @@
       padding-top: 19px;
       padding-bottom: 19px;
       font-weight: 700;
-      font-size: 17px;
+      @include adaptiveValue("font-size", 17, 14);
       line-height: 134.2%;
       letter-spacing: 0.015em;
       color: #ffffff;
@@ -168,7 +168,7 @@
          position: absolute;
          top: 0;
          left: 0;
-         width: 60px;
+         @include adaptiveValue("width", 60, 40);
          height: 100%;
          background-repeat: no-repeat;
          background-position: center;

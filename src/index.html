@@ -10,8 +10,8 @@
       <main class="page">
          <section class="page__create create">
             <div class="create__container">
-               <div class="create__steps">
-                  <div class="create__step active">
+               <div class="create__steps" data-create="steps">
+                  <div class="create__step _active" data-step="title">
                      <div class="create__step-body">
                         <div class="create__step-icon">
                            <img src="@img/create/create-step-title/1.png" alt="">
@@ -19,7 +19,7 @@
                         <div class="create__step-title">Create</div>
                      </div>
                   </div>
-                  <div class="create__step">
+                  <div class="create__step" data-step="title">
                      <div class="create__step-arrow">
                         <img src="@img/create/create-step-title/4.png" alt="">
                      </div>
@@ -30,7 +30,7 @@
                         <div class="create__step-title">Payment</div>
                      </div>
                   </div>
-                  <div class="create__step">
+                  <div class="create__step" data-step="title">
                      <div class="create__step-arrow">
                         <img src="@img/create/create-step-title/4.png" alt="">
                      </div>
@@ -42,16 +42,19 @@
                      </div>
                   </div>
                </div>
-               <div class="create__content">
-                  @@include('html/create/stepContent1.html',{})
-                  @@include('html/create/stepContent2.html',{})
-                  @@include('html/create/stepContent3.html',{})
+               <div class="create__content-wrapper">
+                  <div class="create__content" data-step="content-parent">
+                     @@include('html/create/stepContent1.html',{})
+                     @@include('html/create/stepContent2.html',{})
+                     @@include('html/create/stepContent3.html',{})
+                  </div>
                </div>
             </div>
          </section>
       </main>
       @@include('html/footer.html',{})
    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.3/qrcode.min.js"></script>
    <script src="./js/app.min.js"></script>
 </body>
 

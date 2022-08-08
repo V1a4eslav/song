@@ -69,3 +69,24 @@ h6 {
    font-weight: inherit;
    font-size: inherit;
 }
+
+// сброс для хрома
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+// сброс для firefox
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+   -moz-appearance: number-input;
+}
+// сброс для остальных
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}

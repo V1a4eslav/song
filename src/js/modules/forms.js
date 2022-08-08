@@ -42,7 +42,8 @@ export function forms() {
    function checkInputsValueBlur(form) {
       form.addEventListener('click', (e) => {
          if (e.target.closest('._valid-form') && e.target.classList.contains('_valid-input')) {
-            e.target.addEventListener('blur', () => checkInput(e.target))
+            e.target.addEventListener('blur', () => checkInput(e.target));
+            e.target.addEventListener('input', () => checkInput(e.target));
          }
       })
    }

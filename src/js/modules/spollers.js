@@ -133,7 +133,7 @@ export function spollers() {
 
 //========================================================================================================================================================
 //SlideToggle
-let _slideUp = (target, duration = 500) => {
+export let _slideUp = (target, duration = 500) => {
    if (!target.classList.contains('_slide')) {
       target.classList.add('_slide');
       target.style.transitionProperty = 'height, margin, padding';
@@ -160,7 +160,7 @@ let _slideUp = (target, duration = 500) => {
       }, duration);
    }
 }
-let _slideDown = (target, duration = 500) => {
+export let _slideDown = (target, duration = 500) => {
    if (!target.classList.contains('_slide')) {
       target.classList.add('_slide');
       if (target.hidden) {

@@ -49,5 +49,7 @@ export function range() {
       });
 
       range.noUiSlider.on('change', addChoosenClass);
+
+      return range;
    }
 }

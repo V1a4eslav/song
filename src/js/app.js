@@ -8,13 +8,10 @@ import * as slide from './modules/createSlideForMainSlider.js';
 import * as services from './modules/services-slider.js';
 import './modules/modal/modalIndex.js';
 import './modules/tabs/tabsIndex.js';
-// add modul noUiSlider
-import './modules/range/nouislider.min.js';
-import { range } from './modules/range/range.js';
-// =======================
-import './modules/select/select-app.js';
-import './modules/stepForm.js';
-import './modules/bankCard/bankCard-Index.js'
+import { stepsForm } from './modules/stepForm.js';
+import './modules/bankCard/bankCard-Index.js';
+import { qr } from './modules/qr.js';
+import { bitcoin } from './modules/bitcoin.js';
 
 
 DOM.iconMenu.addEventListener("click", burgerFuntions);
@@ -25,8 +22,9 @@ scrollAnimation.scrollAnimation();
 spoller.spollers();
 // slide.createSlide()
 services.servicesSlider();
-range();
-
+stepsForm();
+qr();
+bitcoin();
 
 
 
