@@ -1,3 +1,4 @@
+import { Modal } from './modal/modalPlugin.js';
 // add modul noUiSlider
 import './range/nouislider.min.js';
 import { range } from './range/range.js';
@@ -8,6 +9,16 @@ import { card } from './bankCard/bankCard-Index.js';
 // add modul select
 import './select/select-app.js';
 import { createSelect } from './select/select-app.js';
+
+const modalSuccessful = new Modal({
+   isOpen: (modal) => {
+      console.log(modal);
+      console.log('opened');
+   },
+   isClose: () => {
+      console.log('closed');
+   },
+});
 
 
 export function stepsForm() {
@@ -90,6 +101,11 @@ export function stepsForm() {
          creatrStepForms.forEach(element => element.classList.remove('_active'));
          creatrSteps.forEach(element => element.classList.remove('_active'));
 
+         modalSuccessful.open('successful');
+         setTimeout(() => {
+            modalSuccessful.close();
+         }, 3000);
+
          creatrStepForms[0].classList.add('_active');
          creatrSteps[0].classList.add('_active');
 
@@ -102,7 +118,7 @@ export function stepsForm() {
 
          setTimeout(() => {
             SmoothScrollBy(document.querySelector('.header'))
-         }, 500);
+         }, 4000);
       }
 
    });

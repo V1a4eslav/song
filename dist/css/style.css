@@ -320,12 +320,12 @@ body.lock {
 }
 
 .fade {
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--transition-time);
 }
 
-.fade.animate-open {
-  opacity: 1;
+.fade-out {
+  opacity: 0;
   transition: opacity var(--transition-time);
 }
 
@@ -643,13 +643,14 @@ body.lock {
   z-index: -1;
   transition: opacity var(--transition-time);
 }
-.modal__wrapper {
+
+.auth-modal__wrapper {
   padding: 115px 10px 30px;
   margin: 0 auto;
   transform: translateY(-100%);
   transition: transform var(--transition-time);
 }
-.modal__content {
+.auth-modal__content {
   position: relative;
   max-width: 560px;
   margin: 0 auto;
@@ -659,7 +660,7 @@ body.lock {
   overflow: hidden;
   cursor: default;
 }
-.modal__close {
+.auth-modal__close {
   display: inline-block;
   position: absolute;
   right: 0;
@@ -668,22 +669,22 @@ body.lock {
   font-size: 20px;
   z-index: 3;
 }
-.modal__close.disabled {
+.auth-modal__close.disabled {
   opacity: 0.3;
   outline: none;
   cursor: auto;
 }
-.modal__header {
+.auth-modal__header {
   margin-bottom: 46px;
 }
-.modal__delimiter {
+.auth-modal__delimiter {
   margin-bottom: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.modal__delimiter::before {
+.auth-modal__delimiter::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -693,7 +694,7 @@ body.lock {
   opacity: 0.5;
   top: calc(50% - 1px);
 }
-.modal__delimiter::after {
+.auth-modal__delimiter::after {
   content: "or";
   position: absolute;
   font-weight: 700;
@@ -705,16 +706,16 @@ body.lock {
   background-color: #fff;
   padding: 5px 14px;
 }
-.modal__inputs {
+.auth-modal__inputs {
   margin-bottom: 25px;
 }
-.modal__input-body {
+.auth-modal__input-body {
   position: relative;
 }
-.modal__input-body:not(:last-child) {
+.auth-modal__input-body:not(:last-child) {
   margin-bottom: 20px;
 }
-.modal__input {
+.auth-modal__input {
   display: block;
   width: 100%;
   height: 40px;
@@ -723,29 +724,30 @@ body.lock {
   border-radius: 70px;
   border: 1px solid #cccccc;
 }
-.header-modal {
+
+.header-auth-modal {
   font-family: "Lato";
 }
-.header-modal__btn:not(:last-child) {
+.header-auth-modal__btn:not(:last-child) {
   margin-bottom: 20px;
 }
-.header-modal__google-btn {
+.header-auth-modal__google-btn {
   background-color: #4caf50;
 }
-.header-modal__google-btn::before {
+.header-auth-modal__google-btn::before {
   content: "";
   background-image: url("../../img/user/auth/icons/google.svg");
   border-right-color: #199c47;
 }
-.header-modal__facebook-btn {
+.header-auth-modal__facebook-btn {
   background-color: #4c69ba;
 }
-.header-modal__facebook-btn::before {
+.header-auth-modal__facebook-btn::before {
   content: "";
   background-image: url("../../img/user/auth/icons/facebook.svg");
   border-right-color: #364e92;
 }
-.header-modal__google-btn, .header-modal__facebook-btn {
+.header-auth-modal__google-btn, .header-auth-modal__facebook-btn {
   position: relative;
   width: 100%;
   border-radius: 70px;
@@ -757,18 +759,18 @@ body.lock {
   color: #ffffff;
 }
 @supports (font-size: clamp( 0.875rem , 0.8155940594rem  +  0.297029703vw , 1.0625rem )) {
-  .header-modal__google-btn, .header-modal__facebook-btn {
+  .header-auth-modal__google-btn, .header-auth-modal__facebook-btn {
     font-size: clamp( 0.875rem , 0.8155940594rem  +  0.297029703vw , 1.0625rem );
   }
 }
 @supports not (font-size: clamp( 0.875rem , 0.8155940594rem  +  0.297029703vw , 1.0625rem )) {
-  .header-modal__google-btn, .header-modal__facebook-btn {
+  .header-auth-modal__google-btn, .header-auth-modal__facebook-btn {
     font-size: calc(
 			0.875rem + 0.1875 * (100vw - 20rem) / 63.125
 		);
   }
 }
-.header-modal__google-btn::before, .header-modal__facebook-btn::before {
+.header-auth-modal__google-btn::before, .header-auth-modal__facebook-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -780,19 +782,19 @@ body.lock {
   border-right-style: solid;
 }
 @supports (width: clamp( 2.5rem , 2.103960396rem  +  1.9801980198vw , 3.75rem )) {
-  .header-modal__google-btn::before, .header-modal__facebook-btn::before {
+  .header-auth-modal__google-btn::before, .header-auth-modal__facebook-btn::before {
     width: clamp( 2.5rem , 2.103960396rem  +  1.9801980198vw , 3.75rem );
   }
 }
 @supports not (width: clamp( 2.5rem , 2.103960396rem  +  1.9801980198vw , 3.75rem )) {
-  .header-modal__google-btn::before, .header-modal__facebook-btn::before {
+  .header-auth-modal__google-btn::before, .header-auth-modal__facebook-btn::before {
     width: calc(
 			2.5rem + 1.25 * (100vw - 20rem) / 63.125
 		);
   }
 }
 
-.footer-modal {
+.footer-auth-modal {
   font-family: "Poppins";
   font-weight: 300;
   font-size: 15px;
@@ -801,7 +803,7 @@ body.lock {
   text-align: center;
   color: #595959;
 }
-.footer-modal__submit-btn {
+.footer-auth-modal__submit-btn {
   font-weight: 900;
   font-size: 17px;
   line-height: 134.2%;
@@ -814,20 +816,20 @@ body.lock {
   border-radius: 70px;
   margin-bottom: 15px;
 }
-.footer-modal__text-items {
+.footer-auth-modal__text-items {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
 }
-.footer-modal__agree-text {
+.footer-auth-modal__agree-text {
   margin-bottom: 35px;
 }
-.footer-modal__signup-link, .footer-modal__signin-link {
+.footer-auth-modal__signup-link, .footer-auth-modal__signin-link {
   font-family: inherit;
   color: #000;
   font-weight: 500;
 }
-.footer-modal__signup-link, .footer-modal__signin-link, .footer-modal__recover-link {
+.footer-auth-modal__signup-link, .footer-auth-modal__signin-link, .footer-auth-modal__recover-link {
   width: fit-content;
   align-self: center;
 }
@@ -836,7 +838,7 @@ body.lock {
   z-index: 100;
   transition: opacity var(--transition-time);
 }
-.modal.open .modal__wrapper {
+.modal.open .auth-modal__wrapper {
   transform: translateY(0);
   transition: transform var(--transition-time);
 }
@@ -6634,6 +6636,205 @@ body.lock {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
+}
+
+.modals {
+  --transition-time: 1s;
+}
+
+.modal-successful__wrapper {
+  padding: 115px 10px 30px;
+  margin: 0 auto;
+}
+.modal-successful__content {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 35px 25px 25px;
+  overflow: hidden;
+  cursor: default;
+  margin: 0 auto;
+}
+@supports (max-width: clamp( 15.625rem , 12.6547029703rem  +  14.8514851485vw , 25rem )) {
+  .modal-successful__content {
+    max-width: clamp( 15.625rem , 12.6547029703rem  +  14.8514851485vw , 25rem );
+  }
+}
+@supports not (max-width: clamp( 15.625rem , 12.6547029703rem  +  14.8514851485vw , 25rem )) {
+  .modal-successful__content {
+    max-width: calc(
+			15.625rem + 9.375 * (100vw - 20rem) / 63.125
+		);
+  }
+}
+.modal-successful__title {
+  text-align: center;
+  color: #55287d;
+}
+@supports (font-size: clamp( 1.875rem , 1.2809405941rem  +  2.9702970297vw , 3.75rem )) {
+  .modal-successful__title {
+    font-size: clamp( 1.875rem , 1.2809405941rem  +  2.9702970297vw , 3.75rem );
+  }
+}
+@supports not (font-size: clamp( 1.875rem , 1.2809405941rem  +  2.9702970297vw , 3.75rem )) {
+  .modal-successful__title {
+    font-size: calc(
+			1.875rem + 1.875 * (100vw - 20rem) / 63.125
+		);
+  }
+}
+.modal-successful__text {
+  color: #55287d;
+  text-align: center;
+}
+@supports (font-size: clamp( 1rem , 0.8811881188rem  +  0.5940594059vw , 1.375rem )) {
+  .modal-successful__text {
+    font-size: clamp( 1rem , 0.8811881188rem  +  0.5940594059vw , 1.375rem );
+  }
+}
+@supports not (font-size: clamp( 1rem , 0.8811881188rem  +  0.5940594059vw , 1.375rem )) {
+  .modal-successful__text {
+    font-size: calc(
+			1rem + 0.375 * (100vw - 20rem) / 63.125
+		);
+  }
+}
+
+.modal.open .check-icon {
+  margin: 30px auto;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #4caf50;
+}
+.modal.open .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+.modal.open .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 4.25s ease-in;
+}
+.modal.open .check-icon::before, .modal.open .check-icon::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  background: #ffffff;
+  transform: rotate(-45deg);
+}
+.modal.open .check-icon .icon-line {
+  height: 5px;
+  background-color: #4caf50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+.modal.open .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+.modal.open .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+.modal.open .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(76, 175, 80, 0.5);
+}
+.modal.open .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: 1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+}
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
 }
 
 .footer {

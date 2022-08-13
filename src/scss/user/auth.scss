@@ -27,14 +27,17 @@
       z-index: -1;
       transition: opacity var(--transition-time);
    }
-   // .modal__wrapper
+}
+
+.auth-modal {
+   // .auth-modal__wrapper
    &__wrapper {
       padding: 115px 10px 30px;
       margin: 0 auto;
       transform: translateY(-100%);
       transition: transform var(--transition-time);
    }
-   // .modal__content
+   // .auth-modal__content
    &__content {
       position: relative;
       max-width: 560px;
@@ -45,7 +48,7 @@
       overflow: hidden;
       cursor: default;
    }
-   // .modal__close
+   // .auth-modal__close
    &__close {
       display: inline-block;
       position: absolute;
@@ -60,11 +63,11 @@
          cursor: auto;
       }
    }
-   // .modal__header
+   // .auth-modal__header
    &__header {
       margin-bottom: 46px;
    }
-   // .modal__delimiter
+   // .auth-modal__delimiter
    &__delimiter {
       margin-bottom: 46px;
       display: flex;
@@ -94,21 +97,18 @@
          padding: 5px 14px;
       }
    }
-   // .modal__form
-   &__form {
-   }
-   // .modal__inputs
+   // .auth-modal__inputs
    &__inputs {
       margin-bottom: 25px;
    }
-   // .modal__input-body
+   // .auth-modal__input-body
    &__input-body {
       position: relative;
       &:not(:last-child) {
          margin-bottom: 20px;
       }
    }
-   // .modal__input
+   // .auth-modal__input
    &__input {
       display: block;
       width: 100%;
@@ -118,22 +118,17 @@
       border-radius: 70px;
       border: 1px solid #cccccc;
    }
-   // .modal__tips
-   &__tips {
-   }
-   // .modal__footer
-   &__footer {
-   }
 }
-.header-modal {
+
+.header-auth-modal {
    font-family: $fontFamily;
-   // .header-modal__btn
+   // .header-auth-modal__btn
    &__btn {
       &:not(:last-child) {
          margin-bottom: 20px;
       }
    }
-   //.header-modal__google-btn
+   //.header-auth-modal__google-btn
    &__google-btn {
       background-color: #4caf50;
       &::before {
@@ -142,7 +137,7 @@
          border-right-color: #199c47;
       }
    }
-   // .header-modal__facebook-btn
+   // .header-auth-modal__facebook-btn
    &__facebook-btn {
       background-color: #4c69ba;
       &::before {
@@ -178,7 +173,7 @@
    }
 }
 
-.footer-modal {
+.footer-auth-modal {
    font-family: $fontFamilyP;
    font-weight: 300;
    font-size: 15px;
@@ -187,7 +182,7 @@
    text-align: center;
    color: #595959;
 
-   // .footer-modal__submit-btn
+   // .footer-auth-modal__submit-btn
    &__submit-btn {
       font-weight: 900;
       font-size: 17px;
@@ -201,17 +196,17 @@
       border-radius: 70px;
       margin-bottom: 15px;
    }
-   // .footer-modal__text-items
+   // .footer-auth-modal__text-items
    &__text-items {
       display: flex;
       flex-direction: column;
       row-gap: 8px;
    }
-   // .footer-modal__agree-text
+   // .footer-auth-modal__agree-text
    &__agree-text {
       margin-bottom: 35px;
    }
-   // .footer-modal__signup-link
+   // .footer-auth-modal__signup-link
    &__signup-link,
    &__signin-link {
       font-family: inherit;
@@ -224,10 +219,10 @@
       width: fit-content;
       align-self: center;
    }
-   // .footer-modal__recover-link
+   // .footer-auth-modal__recover-link
    &__recover-link {
    }
-   // .footer-modal__text
+   // .footer-auth-modal__text
    &__text {
    }
 }
@@ -238,15 +233,8 @@
       z-index: 100;
       transition: opacity var(--transition-time);
    }
-   .modal__wrapper {
+   .auth-modal__wrapper {
       transform: translateY(0);
       transition: transform var(--transition-time);
    }
-}
-
-.field-parent {
-}
-.tips {
-}
-.tips-hidden {
 }

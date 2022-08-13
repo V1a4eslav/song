@@ -34,7 +34,7 @@ export class Modal {
 
    events() {
       if (this.modalsParent) {
-         document.addEventListener("click", function (e) {
+         this.modalsParent.addEventListener("click", function (e) {
             const clickedElement = e.target.closest(`[data-path]`);
             if (clickedElement) {
                e.preventDefault();
@@ -47,11 +47,10 @@ export class Modal {
                this.animationOpen = animationOpen ? animationOpen : 'fade';
                this.animationClose = animationClose ? animationClose : 'fade-out';
                this.speed = speed ? parseInt(speed) : 300;
-               this._nextContainer = document.querySelector(`[data-target=${target}]`);
+               this._nextContainer = this.modalsParent.querySelector(`[data-target=${target}]`);
                // ================================================
                this.modalWrapper = this._nextContainer.querySelector('.modal__wrapper');
                const closeBtn = this._nextContainer.querySelector('.modal__close');
-
                if (closeBtn && this.closeble) {
                   closeBtn.classList.add('disabled');
                }
@@ -94,19 +93,30 @@ export class Modal {
       this.modalContainer = this._nextContainer;
 
       if (selector) {
-         this._nextContainer = document.querySelector(`[data-target=${selector}]`);
+         this._nextContainer = this.modalsParent.querySelector(`[data-target=${selector}]`);
          this.modalContainer = this._nextContainer;
          this.modalWrapper = this._nextContainer.querySelector('.modal__wrapper');
          this.modalPath = document.querySelector(`[data-path="${selector}"]`);
-         let animationOpen = this.modalPath.dataset.animationOpen;
-         let animationClose = this.modalPath.dataset.animationClose;
-         let speed = this.modalPath.dataset.speed;
-         let closeble = this.modalPath.dataset.closeble;
-         this.closeble = closeble;
-         this.animationOpen = animationOpen ? animationOpen : 'fade';
-         this.animationClose = animationClose ? animationClose : 'fade-out';
-         this.speed = speed ? parseInt(speed) : 300;
-
+         if (this.modalPath) {
+            let animationOpen = this.modalPath.dataset.animationOpen;
+            let animationClose = this.modalPath.dataset.animationClose;
+            let speed = this.modalPath.dataset.speed;
+            let closeble = this.modalPath.dataset.closeble;
+            this.closeble = closeble;
+            this.animationOpen = animationOpen ? animationOpen : 'fade';
+            this.animationClose = animationClose ? animationClose : 'fade-out';
+            this.speed = speed ? parseInt(speed) : 300;
+         } else {
+            // не всегда по клику открываетя модалка ,и параметры закидываем в таргет
+            let animationOpen = this._nextContainer.dataset.animationOpen;
+            let animationClose = this._nextContainer.dataset.animationClose;
+            let speed = this._nextContainer.dataset.speed;
+            let closeble = this._nextContainer.dataset.closeble;
+            this.closeble = closeble;
+            this.animationOpen = animationOpen ? animationOpen : 'fade';
+            this.animationClose = animationClose ? animationClose : 'fade-out';
+            this.speed = speed ? parseInt(speed) : 300;
+         }
          const closeBtn = this.modalContainer.querySelector('.modal__close');
          if (closeBtn && this.closeble) {
             closeBtn.classList.add('disabled');

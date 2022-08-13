@@ -58,12 +58,12 @@ body {
    animation-fill-mode: both;
 }
 .fade {
-   opacity: 0;
+   opacity: 1;
    transition: opacity var(--transition-time);
 }
 
-.fade.animate-open {
-   opacity: 1;
+.fade-out {
+   opacity: 0;
    transition: opacity var(--transition-time);
 }
 

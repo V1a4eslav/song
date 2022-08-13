@@ -46,41 +46,41 @@
       <main class="page">
          <section class="auth">
             <div class="modals">
-               <div class="modal" data-target="signIn">
-   <div class="modal__overlay">
-      <div class="modal__wrapper">
-         <div class="modal__content">
-            <button class="modal__close">x</button>
-            <div class="modal__header header-modal">
-               <button class="header-modal__btn header-modal__google-btn">SIGN IN WITH GOOGLE</button>
-               <button class="header-modal__btn header-modal__facebook-btn">SIGN IN WITH facebook</button>
+               <div class="modal auth-modal" data-target="signIn">
+   <div class="modal__overlay auth-modal__overlay">
+      <div class="modal__wrapper auth-modal__wrapper">
+         <div class="modal__content auth-modal__content">
+            <button class="modal__close auth-modal__close">x</button>
+            <div class="auth-modal__header header-auth-modal">
+               <button class="header-auth-modal__btn header-auth-modal__google-btn">SIGN IN WITH GOOGLE</button>
+               <button class="header-auth-modal__btn header-auth-modal__facebook-btn">SIGN IN WITH facebook</button>
             </div>
-            <span class="modal__delimiter"></span>
-            <form class="modal__form _valid-form" name="modal__form_login">
-               <div class="modal__inputs">
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="email" data-type="email" type="email"
+            <span class="auth-modal__delimiter"></span>
+            <form class="auth-modal__form _valid-form" name="auth-modal__form_login">
+               <div class="auth-modal__inputs">
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="email" data-type="email" type="email"
                         placeholder="E-mail@mail.com">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="password" data-type="password" type="password"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="password" data-type="password" type="password"
                         placeholder="Password">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
                </div>
-               <div class="modal__footer footer-modal">
-                  <button class="footer-modal__submit-btn" type="submit">SIGN IN</button>
-                  <p class="footer-modal__agree-text">I agree to TypeSong Terms & Privacy Policy</p>
-                  <div class="footer-modal__text-items">
-                     <button class="footer-modal__signup-link" data-path="signUp"
+               <div class="auth-modal__footer footer-auth-modal">
+                  <button class="footer-auth-modal__submit-btn" type="submit">SIGN IN</button>
+                  <p class="footer-auth-modal__agree-text">I agree to TypeSong Terms & Privacy Policy</p>
+                  <div class="footer-auth-modal__text-items">
+                     <button class="footer-auth-modal__signup-link" data-path="signUp"
                         data-animation-open="animate__backInDown" data-animation-close="animate__backOutUp"
                         data-speed="1000" data-closeble="true">Not a member? Sign Up</button>
-                     <a class="footer-modal__recover-link" href="#">Forgot your
+                     <a class="footer-auth-modal__recover-link" href="#">Forgot your
                         password?</a>
-                     <p class="footer-modal__text">Didn't receive confirmation link?
+                     <p class="footer-auth-modal__text">Didn't receive confirmation link?
                      </p>
-                     <p class="footer-modal__text">Didn't receive unlock instructions?
+                     <p class="footer-auth-modal__text">Didn't receive unlock instructions?
                      </p>
                   </div>
                </div>
@@ -91,80 +91,81 @@
 </div>
 
 
-<div class="modal" data-target="signUp">
-   <div class="modal__overlay">
-      <div class="modal__wrapper">
-         <div class="modal__content">
-            <button class="modal__close">x</button>
-            <div class="modal__header header-modal">
-               <button class="header-modal__btn header-modal__google-btn">SIGN IN WITH GOOGLE</button>
-               <button class="header-modal__btn header-modal__facebook-btn">SIGN IN WITH facebook</button>
+<div class="modal auth-modal" data-target="signUp">
+   <div class="modal__overlay auth-modal__overlay">
+      <div class="modal__wrapper auth-modal__wrapper">
+         <div class="modal__content auth-modal__content">
+            <button class="modal__close auth-modal__close">x</button>
+            <div class="auth-modal__header header-auth-modal">
+               <button class="header-auth-modal__btn header-auth-modal__google-btn">SIGN IN WITH GOOGLE</button>
+               <button class="header-auth-modal__btn header-auth-modal__facebook-btn">SIGN IN WITH facebook</button>
             </div>
-            <span class="modal__delimiter"></span>
-            <form class="modal__form _valid-form" name="modal__form_login">
-               <div class="modal__inputs">
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="name" data-type="text" type="text"
+            <span class="auth-modal__delimiter"></span>
+            <form class="auth-modal__form _valid-form" name="auth-modal__form_login">
+               <div class="auth-modal__inputs">
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="name" data-type="text" type="text"
                         placeholder="First name">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input" name="surname" data-type="text" type="text"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input" name="surname" data-type="text" type="text"
                         placeholder="Surname (Optional)">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input" name="stage" data-type="text" type="text"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input" name="stage" data-type="text" type="text"
                         placeholder="Alias/Stag name (Optional)">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="email" data-type="email" type="email"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="email" data-type="email" type="email"
                         placeholder="E-mail@mail.com">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="DOB" data-type="text" type="text" placeholder="DOB">
-                     <span class="modal__tips tips tips-hidden"></span>
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="DOB" data-type="text" type="text"
+                        placeholder="DOB">
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="country" data-type="text" type="text"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="country" data-type="text" type="text"
                         placeholder="Country">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="language" data-type="text" type="text"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="language" data-type="text" type="text"
                         placeholder="Language">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="contact number" data-type="tel" type="tel"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="contact number" data-type="tel" type="tel"
                         placeholder="Contact number">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="password" data-type="password" type="password"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="password" data-type="password" type="password"
                         placeholder="Password">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
-                  <div class="modal__input-body field-parent">
-                     <input class="modal__input _valid-input" name="passwordConfirm" data-type="passwordConfirm"
+                  <div class="auth-modal__input-body field-parent">
+                     <input class="auth-modal__input _valid-input" name="passwordConfirm" data-type="passwordConfirm"
                         type="password" placeholder="Confirm Password">
-                     <span class="modal__tips tips tips-hidden"></span>
+                     <span class="auth-modal__tips tips tips-hidden"></span>
                   </div>
                </div>
-               <div class="modal__footer footer-modal">
-                  <button class="footer-modal__submit-btn" type="submit">SIGN IN</button>
-                  <p class="footer-modal__agree-text">I agree to TypeSong Terms & Privacy Policy</p>
-                  <div class="footer-modal__text-items">
-                     <button class="footer-modal__signin-link" data-path="signIn"
+               <div class="auth-modal__footer footer-auth-modal">
+                  <button class="footer-auth-modal__submit-btn" type="submit">SIGN IN</button>
+                  <p class="footer-auth-modal__agree-text">I agree to TypeSong Terms & Privacy Policy</p>
+                  <div class="footer-auth-modal__text-items">
+                     <button class="footer-auth-modal__signin-link" data-path="signIn"
                         data-animation-open="animate__backInDown" data-animation-close="animate__backOutUp"
                         data-speed="1000" data-closeble="true">Already a member? Sign In</button>
-                     <a class="footer-modal__recover-link" href="#">Forgot your
+                     <a class="footer-auth-modal__recover-link" href="#">Forgot your
                         password?</a>
-                     <p class="footer-modal__text">Didn't receive confirmation link?
+                     <p class="footer-auth-modal__text">Didn't receive confirmation link?
                      </p>
-                     <p class="footer-modal__text">Didn't receive unlock instructions?
+                     <p class="footer-auth-modal__text">Didn't receive unlock instructions?
                      </p>
                   </div>
                </div>
