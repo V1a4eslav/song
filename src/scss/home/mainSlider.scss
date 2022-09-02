@@ -4,9 +4,9 @@
    }
 }
 .main-slider {
-   @media (max-width: $tablet) {
-      margin-top: rem(80);
-   }
+   // @media (min-width: $tablet) {
+   //    margin-top: rem(80);
+   // }
    // .main-slider__container
    &__container {
    }

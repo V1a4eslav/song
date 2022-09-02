@@ -133,7 +133,7 @@
       background-color: #4caf50;
       &::before {
          content: "";
-         background-image: url("../../img/user/auth/icons/google.svg");
+         background-image: url("../img/user/auth/icons/google.svg");
          border-right-color: #199c47;
       }
    }
@@ -142,7 +142,7 @@
       background-color: #4c69ba;
       &::before {
          content: "";
-         background-image: url("../../img/user/auth/icons/facebook.svg");
+         background-image: url("../img/user/auth/icons/facebook.svg");
          border-right-color: #364e92;
       }
    }

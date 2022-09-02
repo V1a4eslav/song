@@ -33,6 +33,7 @@ export class Modal {
    }
 
    events() {
+      // if (!this.modalsParent) return;
       if (this.modalsParent) {
          this.modalsParent.addEventListener("click", function (e) {
             const clickedElement = e.target.closest(`[data-path]`);
@@ -85,6 +86,7 @@ export class Modal {
 
    open(selector) {
       this.previousActiveElement = document.activeElement;
+
       if (this.isOpen) {
          this._reOpen = true;
          this.close();
@@ -93,6 +95,7 @@ export class Modal {
       this.modalContainer = this._nextContainer;
 
       if (selector) {
+         if (!this.modalsParent) return;
          this._nextContainer = this.modalsParent.querySelector(`[data-target=${selector}]`);
          this.modalContainer = this._nextContainer;
          this.modalWrapper = this._nextContainer.querySelector('.modal__wrapper');

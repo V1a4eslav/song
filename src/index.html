@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-'title':'Create'
+'title':'Home'
 })
 
 <body>
    <div class="wrapper">
       @@include('html/header/header.html',{})
       <main class="page">
-         <section class="page__create create">
-            <div class="create__container">
-               <div class="create__steps" data-create="steps">
-                  <div class="create__step _active" data-step="title">
-                     <div class="create__step-body">
-                        <div class="create__step-icon">
-                           <img src="@img/create/create-step-title/1.png" alt="">
-                        </div>
-                        <div class="create__step-title">Create</div>
-                     </div>
-                  </div>
-                  <div class="create__step" data-step="title">
-                     <div class="create__step-arrow">
-                        <img src="@img/create/create-step-title/4.png" alt="">
-                     </div>
-                     <div class="create__step-body">
-                        <div class="create__step-icon">
-                           <img src="@img/create/create-step-title/2.png" alt="">
-                        </div>
-                        <div class="create__step-title">Payment</div>
-                     </div>
-                  </div>
-                  <div class="create__step" data-step="title">
-                     <div class="create__step-arrow">
-                        <img src="@img/create/create-step-title/4.png" alt="">
-                     </div>
-                     <div class="create__step-body">
-                        <div class="create__step-icon">
-                           <img src="@img/create/create-step-title/3.png" alt="">
-                        </div>
-                        <div class="create__step-title">Submit</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="create__content-wrapper">
-                  <div class="create__content" data-step="content-parent">
-                     @@include('html/create/stepContent1.html',{})
-                     @@include('html/create/stepContent2.html',{})
-                     @@include('html/create/stepContent3.html',{})
-                  </div>
-               </div>
-               <div class="modals">
-                  <div class="modal modal-successful" data-closeble="true" data-speed="1000" data-target="successful">
-                     <div class="modal__overlay modal-successful__overlay">
-                        <div class="modal__wrapper modal-successful__wrapper">
-                           <div class="modal__content modal-successful__content">
-                              <h3 class="modal-successful__title">Great</h3>
-                              <div class="check-icon">
-                                 <span class="icon-line line-tip"></span>
-                                 <span class="icon-line line-long"></span>
-                                 <div class="icon-circle"></div>
-                                 <div class="icon-fix"></div>
-                              </div>
-                              <p class="modal-successful__text">You have successfully created !</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+         @@include('html/home/mainSlider.html',{})
+         @@include('html/home/sponsors.html',{})
+         @@include('html/home/description.html',{})
+         @@include('html/home/charts.html',{})
+         @@include('html/home/process.html',{})
+         @@include('html/home/projections.html',{})
+         @@include('html/home/gain-recognition.html',{})
+         @@include('html/home/chart.html',{})
       </main>
       @@include('html/footer.html',{})
    </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.3/qrcode.min.js"></script>
    <script src="./js/app.min.js"></script>
 </body>
 

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.min.css?_v=20220902141108">
+   <title>Create</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header fix-block">
+   <div class="header__container">
+      <div class="header__content">
+         <a class="header__logo logo" href="./index.html">
+            <div class="logo__img">
+               <img src="./img/logo.svg" alt="logo">
+            </div>
+            <span class="logo__text">TypeSong</span>
+         </a>
+         <nav class="header__nav">
+            <div class="nav-header">
+               <a class="nav-header__link" href="./index.html">Home</a>
+               <a class="nav-header__link" href="./create.html">Create</a>
+               <a class="nav-header__link" href="./services.html">Services</a>
+               <a class="nav-header__link" href="./faq.html">Contact / FAQ</a>
+            </div>
+         </nav>
+         <a class="header__user user-header" href="./auth.html" data-path="signIn"
+            data-animation-open="animate__backInDown" data-animation-close="animate__backOutUp" data-speed="1000"
+            data-closeble="true">
+            <div class="user-header__text">Login</div>
+            <div class="user-header__icon">
+               <picture><source srcset="./img/icons/header-user.webp" type="image/webp"><img src="./img/icons/header-user.png" alt="user-icon"></picture>
+            </div>
+         </a>
+         <div class="header__icon-menu icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+   </div>
+</header>
+      <main class="page">
+         <section class="page__create create">
+            <div class="create__container">
+               <div class="create__steps" data-create="steps">
+                  <div class="create__step _active" data-step="title">
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <picture><source srcset="./img/create/create-step-title/1.webp" type="image/webp"><img src="./img/create/create-step-title/1.png" alt=""></picture>
+                        </div>
+                        <div class="create__step-title">Create</div>
+                     </div>
+                  </div>
+                  <div class="create__step" data-step="title">
+                     <div class="create__step-arrow">
+                        <picture><source srcset="./img/create/create-step-title/4.webp" type="image/webp"><img src="./img/create/create-step-title/4.png" alt=""></picture>
+                     </div>
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <picture><source srcset="./img/create/create-step-title/2.webp" type="image/webp"><img src="./img/create/create-step-title/2.png" alt=""></picture>
+                        </div>
+                        <div class="create__step-title">Payment</div>
+                     </div>
+                  </div>
+                  <div class="create__step" data-step="title">
+                     <div class="create__step-arrow">
+                        <picture><source srcset="./img/create/create-step-title/4.webp" type="image/webp"><img src="./img/create/create-step-title/4.png" alt=""></picture>
+                     </div>
+                     <div class="create__step-body">
+                        <div class="create__step-icon">
+                           <picture><source srcset="./img/create/create-step-title/3.webp" type="image/webp"><img src="./img/create/create-step-title/3.png" alt=""></picture>
+                        </div>
+                        <div class="create__step-title">Submit</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="create__content-wrapper">
+                  <div class="create__content" data-step="content-parent">
+                     <form action="#" class="create__step-content _active" data-step="form" name="stepOne">
+   <div class="step-content-one" data-spollers>
+      <div class="step-content-one__item" data-stepItem="req">
+         <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-one__title">Select</span>
+         </button>
+         <div class="step-content-one__item-wrapper">
+            <fieldset>
+               <div class="step-content-one__item-inner">
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Beat" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <picture><source srcset="./img/create/select/1.webp" type="image/webp"><img src="./img/create/select/1.png" alt=""></picture>
+                     </div>
+                     <span class="step-content-one__checkbox-text">Beat</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Song" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <picture><source srcset="./img/create/select/2.webp" type="image/webp"><img src="./img/create/select/2.png" alt=""></picture>
+                     </div>
+                     <span class="step-content-one__checkbox-text">Song</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="Lyrics" data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <picture><source srcset="./img/create/select/3.webp" type="image/webp"><img src="./img/create/select/3.png" alt=""></picture>
+                     </div>
+                     <span class="step-content-one__checkbox-text">Lyrics</span>
+                  </label>
+                  <label class="step-content-one__item-body">
+                     <input class="step-content-one__checkbox-item" type="checkbox" name="seleProjectct"
+                        data-check="checkbox">
+                     <div class="step-content-one__checkbox-img">
+                        <picture><source srcset="./img/create/select/4.webp" type="image/webp"><img src="./img/create/select/4.png" alt=""></picture>
+                     </div>
+                     <span class="step-content-one__checkbox-text">Project</span>
+                  </label>
+               </div>
+            </fieldset>
+         </div>
+      </div>
+      <div class="step-content-one__item" data-stepItem="not-req">
+         <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-one__title">Choose artist style</span>
+         </button>
+         <div class="step-content-one__item-wrapper">
+            <div class="step-content-one__input-body">
+               <input class="step-content-one__input" name="artist-style" data-check="inputField" data-type="text"
+                  type="text" placeholder="Choose artist style">
+            </div>
+         </div>
+      </div>
+      <div class="step-content-one__item" data-stepItem="req">
+         <div class="step-content-one__range-inner">
+            <button class="step-content-one__range-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-one__title _active" type="button" tabindex="-1"
+               data-spoller>Tempo</button>
+            <div class="step-content-one__item-wrapper">
+               <div class="step-content-one__range" id="range"></div>
+               <div class="step-content-one__range-body">
+                  <div class="step-content-one__range-btns">
+                     <button class="step-content-one__range-button-fast" data-fast type="button">Fast</button>
+                     <span class="step-content-one__separator-btns">/</span>
+                     <button class="step-content-one__range-button-slow" data-slow type="button">Slow</button>
+                  </div>
+                  <div class="step-content-one__range-count">
+                     <span class="step-content-one__range-number" data-type="range-value">187</span>
+                     <span class="step-content-one__range-text">Bpm</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-one__item" data-stepItem="not-req">
+         <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-one__title">What song should it sound like?</span>
+         </button>
+         <div class="step-content-one__item-wrapper">
+            <p class="step-content-one__text">You may post up to 3 links</p>
+            <div class="step-content-one__input-body">
+               <input class="step-content-one__input step-content-one__input_placeholder" name="links" data-type="text"
+                  type="text" placeholder="You may post a link" data-checkurl="3">
+            </div>
+         </div>
+      </div>
+      <div class="step-content-one__item" data-stepItem="req">
+         <button type="button" class="step-content-one__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-one__title">Purpose of song</span>
+         </button>
+         <div class="step-content-one__item-wrapper">
+            <div class="step-content-one__select select-step-one" data-select></div>
+         </div>
+      </div>
+      <button type="button" class="step-content__submit" data-btn="next" disabled>Continue</button>
+   </div>
+</form>
+                     <form class="create__step-content" data-step="form" name="stepTwo">
+   <div class="step-content-two">
+      <div class="step-content-two__tabs" data-tabs="tab">
+         <div class="step-content-two__tabs-body" data-tabsparent>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="./img/icons/create/debit.svg" alt="debit">
+                  </div>
+                  <p class="step-content-two__btn-text">Credit/Debit Card</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="./img/icons/create/bank.svg" alt="bank">
+                  </div>
+                  <p class="step-content-two__btn-text">Bank Transfer</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+            <div class="step-content-two__btn" data-tab>
+               <div class="step-content-two__btn-inner">
+                  <div class="step-content-two__btn-img">
+                     <img src="./img/icons/create/bitcoin.svg" alt="bitcoin">
+                  </div>
+                  <p class="step-content-two__btn-text">Bitcoin</p>
+                  <div class="step-content-two__btn-marker"></div>
+               </div>
+            </div>
+         </div>
+         <div class="step-content-two__content">
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="card" data-card="cardBank">
+                  <div class="card__inner">
+                     <div class="card__front" data-card="front">
+                        <div class="card__front-logo" data-card="logo">
+                           <img src="./img/source/bank-svgrepo-com.svg" alt='logo-bank' data-card="defaultLogoImg">
+                        </div>
+                        <input class="card__front-number" type="text" id="card-number" placeholder="0000 0000 0000 0000"
+                           data-ccard="req">
+                        <div class="card__front-footer">
+                           <div class="card__front-footer-date">
+                              <input class="card__front-card-month" type="text" id="card-month" placeholder="MM"
+                                 disabled data-ccard="req">
+                              <span>/</span>
+                              <input class="card__front-card-year" type="text" id="card-year" placeholder="YY" disabled
+                                 data-ccard="req">
+                           </div>
+                           <div class="card__front-img" data-card="payBrand">
+                              <img src="./img/source/credit-card.svg" alt=" defaultBankBrandIcon"
+                                 data-card="defaultPayImg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card__back" data-card="back">
+                        <div class="card__back-line"></div>
+                        <input type="text" class="card__back-cvv" data-ccard="req" data-card="cardBackCvv" disabled>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="bank-transfer _valid-form form-group">
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-name">Name</label>
+                     <input id="bank-transfer-name" class="bank-transfer__input _valid-input" name="Your Name"
+                        data-type="name" type="text" placeholder="Your Name">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-address">Address</label>
+                     <input id="bank-transfer-address" class="bank-transfer__input _valid-input" name="Address"
+                        data-type="name" type="text" placeholder="Address">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-email">Email</label>
+                     <input id="bank-transfer-email" class="bank-transfer__input _valid-input" name="Email"
+                        data-type="email" type="email" placeholder="Email">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+                  <div class="bank-transfer__input-body field-parent">
+                     <label class="bank-transfer__input-label" for="bank-transfer-tel">Contact Number</label>
+                     <input id="bank-transfer-tel" class="bank-transfer__input _valid-input" name="tel" data-type="tel"
+                        type="text" placeholder="Contact Number">
+                     <span class="bank-transfer__tips tips tips-hidden"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="step-content-two__item" data-tabContent data-stepItem="req">
+               <div class="bitcoin">
+                  <div class="bitcoin__inner">
+                     <p class="bitcoin__text-prompt">To pay, please send exact amount of BTC to the <span
+                           class="bitcoin__text-prompt_pink-color">given address</span>
+                     </p>
+                     <p class="bitcoin__address">3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5</p>
+                     <div class="bitcoin__price">
+                        <p class="bitcoin__price-btn"><span data-btc>0.06625066</span> BTC</p>
+                        <p class="bitcoin__price-usd">= <span data-usd>499.00</span> USD</p>
+                     </div>
+                     <div class="bitcoin__qr" data-qr></div>
+                     <p class="bitcoin__text">Click on the QR code opem in the wallet</p>
+                     <button class="bitcoin__btn" type="button" disabled>I Paid</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <button type="button" class="step-content__submit" data-btn="next" disabled>Continue</button>
+   </div>
+</form>
+                     <form action="#" class="create__step-content" data-step="form" name="stepThree">
+   <div class="step-content-three" data-spollers>
+      <div class="step-content-three__item" data-stepItem="req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Select Genre</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <div class="step-content-three__item-inner">
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="pop" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.1.webp" type="image/webp"><img src="./img/create/select/3.1.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Pop</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Rap" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.2.webp" type="image/webp"><img src="./img/create/select/3.2.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Rap</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="hip-hop" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.3.webp" type="image/webp"><img src="./img/create/select/3.3.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Hip hop</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="opera" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.4.webp" type="image/webp"><img src="./img/create/select/3.4.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Opera</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="jazz" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.5.webp" type="image/webp"><img src="./img/create/select/3.5.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Jazz</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="R&B" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.6.webp" type="image/webp"><img src="./img/create/select/3.6.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">R&B</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="metal" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.7.webp" type="image/webp"><img src="./img/create/select/3.7.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Metal</span>
+               </label>
+               <label class="step-content-three__item-body">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="punk" data-check="checkbox">
+                  <div class="step-content-three__checkbox-img">
+                     <picture><source srcset="./img/create/select/3.8.webp" type="image/webp"><img src="./img/create/select/3.8.png" alt=""></picture>
+                  </div>
+                  <span class="step-content-three__checkbox-text">Punk</span>
+               </label>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__upload-inner">
+            <button class="step-content-three__upload-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Do you have audio you want sampled?</button>
+            <div class="step-content-three__upload-wrapper">
+               <div class="step-content-three__upload-body">
+                  <div class="step-content-three__item-upload-column step-content-three__item-upload-column_input">
+                     <div class="step-content-three__item-upload-text">You may post a link</div>
+                     <div class="step-content-three__input-body">
+                        <input class="step-content-three__item-upload-input" type="text"
+                           placeholder="You may post a link">
+                     </div>
+                  </div>
+                  <div class="step-content-three__item-upload-column">
+                     <div class="step-content-three__item-upload-text"> You may upload audio file</div>
+                     <button class="step-content-three__item-upload-btn" type="button">UPLOAD AUDIO</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Emotions</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <fieldset class="step-content-three__checkbox-inner">
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Love" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Love</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Angry" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Angry</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Happy" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Happy</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Sad" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Sad</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Depressed"
+                     data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Depressed</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Rage" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Rage</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Peaceful"
+                     data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Peaceful</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" type="checkbox" name="Lonely" data-check="checkbox">
+                  <button class="step-content-three__checkbox-btn" type="button">Lonely</button>
+               </label>
+            </fieldset>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="req">
+         <button type="button" class="step-content-three__header _active" tabindex="-1" data-spoller>
+            <span class="step-content__title step-content-three__title">Mood & Feel</span>
+         </button>
+         <div class="step-content-three__item-wrapper">
+            <div class="step-content-three__item-text">(Choose up to 3)</div>
+            <fieldset class="step-content-three__checkbox-inner">
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Silly">
+                  <button class="step-content-three__checkbox-btn" type="button">Silly</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Dark">
+                  <button class="step-content-three__checkbox-btn" type="button">Dark</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Epic">
+                  <button class="step-content-three__checkbox-btn" type="button">Epic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Party">
+                  <button class="step-content-three__checkbox-btn" type="button">Party</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Aggressive">
+                  <button class="step-content-three__checkbox-btn" type="button">Aggressive</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Chill">
+                  <button class="step-content-three__checkbox-btn" type="button">Chill</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Club">
+                  <button class="step-content-three__checkbox-btn" type="button">Club</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Celebration">
+                  <button class="step-content-three__checkbox-btn" type="button">Celebration</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Gangster">
+                  <button class="step-content-three__checkbox-btn" type="button">Gangster</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Sexy">
+                  <button class="step-content-three__checkbox-btn" type="button">Sexy</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Parody">
+                  <button class="step-content-three__checkbox-btn" type="button">Parody</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Romance">
+                  <button class="step-content-three__checkbox-btn" type="button">Romance</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Break-up">
+                  <button class="step-content-three__checkbox-btn" type="button">Break-up</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Confident">
+                  <button class="step-content-three__checkbox-btn" type="button">Confident</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Cocky">
+                  <button class="step-content-three__checkbox-btn" type="button">Cocky</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Confident">
+                  <button class="step-content-three__checkbox-btn" type="button">Confident</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Calm">
+                  <button class="step-content-three__checkbox-btn" type="button">Calm</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Relaxed">
+                  <button class="step-content-three__checkbox-btn" type="button">Relaxed</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Sympathetic">
+                  <button class="step-content-three__checkbox-btn" type="button">Sympathetic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Energetic">
+                  <button class="step-content-three__checkbox-btn" type="button">Energetic</button>
+               </label>
+               <label class="step-content-three__checkbox">
+                  <input class="step-content-three__checkbox-item" data-check="checkbox-max-3" type="checkbox"
+                     name="Stressed">
+                  <button class="step-content-three__checkbox-btn" type="button">Stressed</button>
+               </label>
+            </fieldset>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__prefernces-inner">
+            <button class="step-content-three__prefernces-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Prefernces</button>
+            <div class="step-content-three__item-wrapper">
+               <p class="step-content-three__item-text">Is there anything you do NOT
+                  want to hear in your project?</p>
+               <textarea class="step-content-three__item-textarea" name="Prefernces"
+                  placeholder="You may post up to 3 links" data-checkurl="3"></textarea>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item choosen" data-stepItem="not-req">
+         <div class="step-content-three__question-inner">
+            <button class="step-content-three__question-reset active" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Do you require viral marceting, promotion and distribution?</button>
+            <div class="step-content-three__item-wrapper">
+               <div class="step-content-three__question-btns">
+                  <div class="step-content-three__question-radio-btns" data-choosen>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="marketing">
+                        <span class="step-content-three__radio-text">Yes</span>
+                     </label>
+                     <span class="step-content-three__radio-separator">/</span>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="marketing" checked>
+                        <span class="step-content-three__radio-text">No</span>
+                     </label>
+                  </div>
+                  <div class="step-content-three__show-btn">
+                     <button class="show-text" type="button" data-show>Show less</button>
+                     <svg class="show-arrow up" width="16" height="21" viewBox="0 0 16 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M0.929612 6.65685L7.29357 0.292893C7.6841 -0.0976313 8.31726 -0.0976313 8.70779 0.292893L15.0717 6.65685C15.4623 7.04738 15.4623 7.68054 15.0717 8.07107C14.6812 8.46159 14.0481 8.46159 13.6575 8.07107L9.00068 3.41421L9.00068 21L7.00068 21L7.00068 3.41421L2.34383 8.07107C1.9533 8.46159 1.32014 8.46159 0.929612 8.07107C0.539088 7.68054 0.539088 7.04738 0.929612 6.65685Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+               </div>
+               <p class="step-content-three__question-text open" data-text>
+                  A single deal with additional question, distribution and promotion. Best way to guarantee streams,
+                  and generate a quick buzz! TypeSong will work extensively behind the scenes negotiating the best deal
+                  for your single
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item choosen" data-stepItem="not-req">
+         <div class="step-content-three__question-inner">
+            <button class="step-content-three__question-reset active" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Shall we submit your finished project to record label representatives?</button>
+            <div class="step-content-three__item-wrapper">
+               <div class="step-content-three__question-btns">
+                  <div class="step-content-three__question-radio-btns" data-choosen>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="question">
+                        <span class="step-content-three__radio-text">Yes</span>
+                     </label>
+                     <span class="step-content-three__radio-separator">/</span>
+                     <label class="step-content-three__radio-body">
+                        <input class="step-content-three__radio-item" type="radio" name="question" checked>
+                        <span class="step-content-three__radio-text">No</span>
+                     </label>
+                  </div>
+                  <div class="step-content-three__show-btn">
+                     <button class="show-text" type="button" data-show>Show less</button>
+                     <svg class="show-arrow up" width="16" height="21" viewBox="0 0 16 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M0.929612 6.65685L7.29357 0.292893C7.6841 -0.0976313 8.31726 -0.0976313 8.70779 0.292893L15.0717 6.65685C15.4623 7.04738 15.4623 7.68054 15.0717 8.07107C14.6812 8.46159 14.0481 8.46159 13.6575 8.07107L9.00068 3.41421L9.00068 21L7.00068 21L7.00068 3.41421L2.34383 8.07107C1.9533 8.46159 1.32014 8.46159 0.929612 8.07107C0.539088 7.68054 0.539088 7.04738 0.929612 6.65685Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+               </div>
+               <p class="step-content-three__question-text open" data-text>
+                  At no additional cost, send us your completed song and we pitch your song/project to music labels, and
+                  negotiate third party brand sponsorships with companies such as Universal Music Group, Netflix, Nike
+                  and many more(only available for Single Deals
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item" data-stepItem="not-req">
+         <div class="step-content-three__prefernces-inner">
+            <button class="step-content-three__prefernces-reset" data-skip type="button">Skip</button>
+            <button class="step-content__title step-content-three__title _active" type="button" tabindex="-1"
+               data-spoller>Special requirements</button>
+            <div class="step-content-three__item-wrapper">
+               <textarea class="step-content-three__item-textarea" name="SpecialRequirements"
+                  placeholder="Your requirements" data-check="inputField"></textarea>
+            </div>
+         </div>
+      </div>
+      <div class="step-content-three__item-accept" data-accept data-stepItem="req">
+         <label>
+            <input class="step-content-three__checkbox-accept" type="checkbox" name="accept" data-input="accept">
+            <span class="step-content-three__custom-checkbox"></span>
+            <span class="step-content-three__custom-checkbox-text">I accept terms and conditions</span>
+         </label>
+      </div>
+   </div>
+   <button type="button" class="step-content__submit" data-btn="finnish" disabled>Finnish</button>
+</form>
+                  </div>
+               </div>
+               <div class="modals">
+                  <div class="modal modal-successful" data-closeble="true" data-speed="2000" data-target="successful">
+                     <div class="modal__overlay modal-successful__overlay">
+                        <div class="modal__wrapper modal-successful__wrapper">
+                           <div class="modal__content modal-successful__content">
+                              <h3 class="modal-successful__title">Great</h3>
+                              <div class="check-icon">
+                                 <span class="icon-line line-tip"></span>
+                                 <span class="icon-line line-long"></span>
+                                 <div class="icon-circle"></div>
+                                 <div class="icon-fix"></div>
+                              </div>
+                              <p class="modal-successful__text">You have successfully created !</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+   <div class="footer__container">
+      <div class="footer__body">
+         <div class="footer__contact contact-footer">
+            <div class="contact-footer__logo">
+               <picture><source srcset="./img/home/footerLogo.webp" type="image/webp"><img src="./img/home/footerLogo.png" alt="footer Logo"></picture>
+            </div>
+            <div class="contact-footer__adress">13 Freeland Park, Lytchett Matravers, Poole, Dorset, United
+               Kingdom,BH16 6FA</div>
+            <a class="contact-footer__tell" href="tel:3335006000">
+               <p>Company contact number:<br>0333 500 6000</p>
+            </a>
+         </div>
+         <div class="contact-footer__footer-links links-footer">
+            <nav class="links-footer__menu">
+               <a class="links-footer__link" href="./home.html">Home</a>
+               <a class="links-footer__link" href="#">Create</a>
+               <a class="links-footer__link" href="./services.html">Services</a>
+               <a class="links-footer__link" href="./faq.html">FAQ</a>
+               <a class="links-footer__link" href="./faq.html">Contact</a>
+               <a class="links-footer__link" href="#">Terms</a>
+            </nav>
+            <form class="links-footer__form footer-form _valid-form form-group" name="footerForm" novalidate>
+               <h2 class="footer-form__title">Stay in</h2>
+               <div class="footer-form__form-body field-parent">
+                  <input class="_valid-input" name="E-mail" type="email" placeholder="E-mail">
+                  <button type="submit">
+                     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.7"
+                           d="M29.0037 8.50691C29.3942 8.11638 29.3942 7.48322 29.0037 7.09269L22.6397 0.728735C22.2492 0.33821 21.616 0.33821 21.2255 0.728735C20.835 1.11926 20.835 1.75242 21.2255 2.14295L26.8823 7.7998L21.2255 13.4567C20.835 13.8472 20.835 14.4803 21.2255 14.8709C21.616 15.2614 22.2492 15.2614 22.6397 14.8709L29.0037 8.50691ZM0.241211 8.7998L28.2965 8.7998L28.2965 6.7998L0.241211 6.7998L0.241211 8.7998Z"
+                           fill="white" />
+                     </svg>
+                  </button>
+                  <span class="footer-form__tips tips tips-hidden"></span>
+               </div>
+               <div class="footer-form__socials socials">
+                  <a class="socials__facebook" href="#">
+                     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M3.82915 29V15.3924H0V10.493H3.82915V6.30822C3.82915 3.01983 6.09105 0 11.3029 0C13.4131 0 14.9736 0.190095 14.9736 0.190095L14.8506 4.76531C14.8506 4.76531 13.2592 4.75075 11.5227 4.75075C9.64319 4.75075 9.34207 5.56464 9.34207 6.91548V10.493H15L14.7538 15.3924H9.34207V29H3.82915Z"
+                           fill="white" />
+                     </svg>
+                  </a>
+                  <a class="socials__insta" href="#">
+                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M29.1989 11.8491C29.1849 10.7933 28.9873 9.74809 28.6149 8.7601C28.292 7.92673 27.7988 7.16989 27.1668 6.53792C26.5349 5.90596 25.778 5.41276 24.9446 5.08986C23.9694 4.72375 22.939 4.52579 21.8975 4.5044C20.5565 4.44446 20.1314 4.42773 16.7274 4.42773C13.3234 4.42773 12.8871 4.42773 11.5559 4.5044C10.5148 4.52594 9.48495 4.7239 8.5101 5.08986C7.6766 5.41254 6.91964 5.90565 6.28765 6.53765C5.65565 7.16964 5.16254 7.9266 4.83986 8.7601C4.47301 9.73465 4.27548 10.7647 4.25579 11.8059C4.19586 13.1482 4.17773 13.5734 4.17773 16.9774C4.17773 20.3814 4.17773 20.8163 4.25579 22.1489C4.2767 23.1916 4.47325 24.2203 4.83986 25.1974C5.16308 26.0307 5.65656 26.7873 6.28877 27.4191C6.92097 28.0508 7.678 28.5437 8.51149 28.8663C9.48367 29.2471 10.5137 29.4592 11.5573 29.4936C12.8996 29.5535 13.3248 29.5716 16.7288 29.5716C20.1328 29.5716 20.5691 29.5716 21.9003 29.4936C22.9418 29.473 23.9722 29.2755 24.9474 28.9095C25.7806 28.5862 26.5372 28.0929 27.1691 27.461C27.8011 26.8291 28.2944 26.0724 28.6177 25.2393C28.9843 24.2635 29.1808 23.2348 29.2017 22.1907C29.2617 20.8497 29.2798 20.4246 29.2798 17.0192C29.277 13.6152 29.277 13.1831 29.1989 11.8491ZM16.719 23.4146C13.1589 23.4146 10.2748 20.5305 10.2748 16.9704C10.2748 13.4103 13.1589 10.5262 16.719 10.5262C18.4281 10.5262 20.0672 11.2052 21.2757 12.4137C22.4843 13.6222 23.1632 15.2613 23.1632 16.9704C23.1632 18.6795 22.4843 20.3186 21.2757 21.5271C20.0672 22.7356 18.4281 23.4146 16.719 23.4146ZM23.4197 11.7905C22.5875 11.7905 21.917 11.1186 21.917 10.2879C21.917 10.0906 21.9559 9.8953 22.0313 9.71308C22.1068 9.53085 22.2175 9.36527 22.3569 9.2258C22.4964 9.08633 22.662 8.9757 22.8442 8.90022C23.0264 8.82474 23.2217 8.78589 23.419 8.78589C23.6162 8.78589 23.8115 8.82474 23.9938 8.90022C24.176 8.9757 24.3416 9.08633 24.481 9.2258C24.6205 9.36527 24.7311 9.53085 24.8066 9.71308C24.8821 9.8953 24.9209 10.0906 24.9209 10.2879C24.9209 11.1186 24.2491 11.7905 23.4197 11.7905Z"
+                           fill="white" />
+                        <path
+                           d="M16.7192 21.1562C19.0311 21.1562 20.9052 19.282 20.9052 16.9702C20.9052 14.6583 19.0311 12.7842 16.7192 12.7842C14.4073 12.7842 12.5332 14.6583 12.5332 16.9702C12.5332 19.282 14.4073 21.1562 16.7192 21.1562Z"
+                           fill="white" />
+                     </svg>
+
+                  </a>
+                  <a class="socials__twit" href="#">
+                     <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M26.4634 2.67208C25.5099 3.09865 24.4722 3.40564 23.4034 3.52521C24.5131 2.84153 25.3441 1.76144 25.7405 0.487567C24.6992 1.12996 23.5584 1.58042 22.3688 1.81896C21.8717 1.26774 21.2703 0.828622 20.6023 0.528954C19.9343 0.229286 19.214 0.0754946 18.4862 0.0771618C15.5414 0.0771618 13.1732 2.55252 13.1732 5.59016C13.1732 6.01672 13.223 6.44328 13.304 6.85369C8.89474 6.61456 4.96219 4.43004 2.34776 1.0854C1.87139 1.9292 1.62175 2.88997 1.62482 3.86775C1.62482 5.78082 2.56277 7.46768 3.99308 8.45976C3.15018 8.42534 2.32702 8.18508 1.59055 7.75852V7.82638C1.59055 10.5053 3.41659 12.7254 5.85028 13.236C5.39333 13.3591 4.92326 13.422 4.45115 13.4234C4.10526 13.4234 3.77806 13.3879 3.44775 13.3394C4.12084 15.5239 6.08088 17.1106 8.41485 17.1623C6.58881 18.6456 4.30157 19.5181 1.81802 19.5181C1.37242 19.5181 0.961088 19.5019 0.53418 19.4502C2.88997 21.0175 5.68513 21.9223 8.6953 21.9223C18.4675 21.9223 23.8147 13.5268 23.8147 6.2397C23.8147 6.00056 23.8147 5.76143 23.7991 5.5223C24.8337 4.73703 25.7405 3.76434 26.4634 2.67208Z"
+                           fill="white" />
+                     </svg>
+                  </a>
+                  <a class="socials__youtube" href="#">
+                     <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M15 1.4502C0.258 1.4502 0 2.76119 0 13.0002C0 23.2392 0.258 24.5502 15 24.5502C29.742 24.5502 30 23.2392 30 13.0002C30 2.76119 29.742 1.4502 15 1.4502ZM19.8075 13.5012L13.0725 16.6452C12.483 16.9182 12 16.6122 12 15.9612V10.0392C12 9.38969 12.483 9.08219 13.0725 9.35519L19.8075 12.4992C20.397 12.7752 20.397 13.2252 19.8075 13.5012Z"
+                           fill="white" />
+                     </svg>
+                  </a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</footer>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.3/qrcode.min.js?_v=20220902141108"></script>
+   <script src="./js/app.min.js?_v=20220902141108"></script>
+</body>
+
+</html>

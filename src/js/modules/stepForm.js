@@ -10,16 +10,6 @@ import { card } from './bankCard/bankCard-Index.js';
 import './select/select-app.js';
 import { createSelect } from './select/select-app.js';
 
-const modalSuccessful = new Modal({
-   isOpen: (modal) => {
-      console.log(modal);
-      console.log('opened');
-   },
-   isClose: () => {
-      console.log('closed');
-   },
-});
-
 
 export function stepsForm() {
    const stepContentParent = document.querySelector('[data-step="content-parent"]');
@@ -98,6 +88,19 @@ export function stepsForm() {
       }
 
       if (e.target === btnFinnish) {
+
+         const modalSuccessful = new Modal(
+            {
+               isOpen: (modal) => {
+                  console.log(modal);
+                  console.log('opened');
+               },
+               isClose: () => {
+                  console.log('closed');
+               },
+            }
+         );
+
          creatrStepForms.forEach(element => element.classList.remove('_active'));
          creatrSteps.forEach(element => element.classList.remove('_active'));
 
@@ -118,7 +121,7 @@ export function stepsForm() {
 
          setTimeout(() => {
             SmoothScrollBy(document.querySelector('.header'))
-         }, 4000);
+         }, 3000 + (+modalSuccessful.speed));
       }
 
    });

@@ -8,24 +8,25 @@ class ModalAuth extends Modal {
    // =====================================================
    _defaultOpen() {
       document.addEventListener("DOMContentLoaded", () => {
-         if (window.location.pathname === "/auth.html") {
-            setTimeout(() => {
-               this.open('signIn')
-            }, 500);
-         }
+         setTimeout(() => {
+            this.open('signIn')
+         }, 500);
       });
    }
 
    // =====================================================
 }
 
-
-const modalAuth = new ModalAuth({
-   isOpen: (modal) => {
-      console.log(modal);
-      console.log('opened');
-   },
-   isClose: () => {
-      console.log('closed');
-   },
-})
+export function modalAuth() {
+   const modalAuth = new ModalAuth(
+      {
+         isOpen: (modal) => {
+            console.log(modal);
+            console.log('opened');
+         },
+         isClose: () => {
+            console.log('closed');
+         },
+      }
+   )
+}

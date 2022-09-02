@@ -6,7 +6,7 @@ import * as scrollAnimation from './modules/scrollAnimation.js';
 import * as spoller from './modules/spollers.js';
 import * as slide from './modules/createSlideForMainSlider.js';
 import * as services from './modules/services-slider.js';
-import './modules/modal/modalIndex.js';
+import { modalAuth } from './modules/modal/modalIndex.js';
 import './modules/tabs/tabsIndex.js';
 import { stepsForm } from './modules/stepForm.js';
 import './modules/bankCard/bankCard-Index.js';
@@ -20,7 +20,8 @@ functions.isWebp();
 forms();
 scrollAnimation.scrollAnimation();
 spoller.spollers();
-// slide.createSlide()
+slide.createSlide();
+modalAuth();
 services.servicesSlider();
 stepsForm();
 qr();
